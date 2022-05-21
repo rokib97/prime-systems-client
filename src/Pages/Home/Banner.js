@@ -1,8 +1,8 @@
 import React from "react";
-import banner from "../../../assets/images/banner.jpg";
+import banner from "../../assets/images/banner.jpg";
 const Banner = () => {
   return (
-    <div class="hero h-full lg:h-[80vh] bg-base-100 w-screen">
+    <div class="hero h-full lg:h-[80vh] bg-base-100">
       <div class="hero-content flex-col lg:flex-row">
         <div>
           <h1 class="text-5xl font-bold">Box Office News!</h1>
