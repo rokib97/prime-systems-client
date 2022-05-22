@@ -1,5 +1,6 @@
 import React from "react";
 import banner from "../../assets/images/banner.jpg";
+import PrimaryButton from "../../components/PrimaryButton";
 const Banner = () => {
   return (
     <div class="hero h-full lg:h-[80vh] bg-base-100">
@@ -12,7 +13,7 @@ const Banner = () => {
             saepe nihil obcaecati corrupti at ratione voluptates. Nulla esse
             necessitatibus delectus consequatur.
           </p>
-          <button class="btn btn-primary">Get Started</button>
+          <PrimaryButton>Get Started</PrimaryButton>
         </div>
         <img src={banner} class="lg:max-w-lg rounded-lg" alt="" />
       </div>

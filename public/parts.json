@@ -1,5 +1,6 @@
 [
   {
+    "_id": 1,
     "name": "Asus ZenBook 14",
     "price": "500",
     "minOrderQuantity": "15",
@@ -8,6 +9,7 @@
     "img": "https://i.ibb.co/nfDpC0B/xps-Gi3i-UJ1-Fwx-I-unsplash.png"
   },
   {
+    "_id": 2,
     "name": "Asus ZenBook 14",
     "price": "500",
     "minOrderQuantity": "15",
@@ -16,6 +18,7 @@
     "img": "https://i.ibb.co/twRZ0zk/sahej-brar-Gc-Fn6g5n-J00-unsplash.png"
   },
   {
+    "_id": 3,
     "name": "Asus ZenBook 14",
     "price": "500",
     "minOrderQuantity": "15",
@@ -24,6 +27,7 @@
     "img": "https://i.ibb.co/BKsRc6H/rahul-chakraborty-2q-Krvxg-Ps-Q8-unsplash.png"
   },
   {
+    "_id": 4,
     "name": "Asus ZenBook 14",
     "price": "500",
     "minOrderQuantity": "15",
@@ -32,6 +36,7 @@
     "img": "https://i.ibb.co/yPT7Jzp/marta-filipczyk-ZXNqu-SCc-BSc-unsplash.png"
   },
   {
+    "_id": 5,
     "name": "Asus ZenBook 14",
     "price": "500",
     "minOrderQuantity": "15",
@@ -40,6 +45,7 @@
     "img": "https://i.ibb.co/fGj04GN/kirill-martynov-x-Zo-NX2slte-U-unsplash.png"
   },
   {
+    "_id": 6,
     "name": "Asus ZenBook 14",
     "price": "500",
     "minOrderQuantity": "15",
@@ -48,6 +54,7 @@
     "img": "https://i.ibb.co/xLZ8sYx/dollar-gill-i-C5f0o-ZNTLw-unsplash.png"
   },
   {
+    "_id": 7,
     "name": "Asus ZenBook 14",
     "price": "500",
     "minOrderQuantity": "15",
@@ -56,6 +63,7 @@
     "img": "https://i.ibb.co/b1tHHJH/erik-mclean-Ed-UYo2-Y435s-unsplash.png"
   },
   {
+    "_id": 8,
     "name": "Asus ZenBook 14",
     "price": "500",
     "minOrderQuantity": "15",

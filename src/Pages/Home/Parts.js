@@ -1,6 +1,7 @@
 import React from "react";
 import { useQuery } from "react-query";
 import { Link } from "react-router-dom";
+import PrimaryButton from "../../components/PrimaryButton";
 import Part from "./Part";
 
 const Parts = () => {
@@ -21,7 +22,7 @@ const Parts = () => {
       </div>
       <div className="my-8 text-right">
         <Link to="/availableparts">
-          <button className="btn btn-primary">See All Parts</button>
+          <PrimaryButton>See All Parts</PrimaryButton>
         </Link>
       </div>
     </div>
