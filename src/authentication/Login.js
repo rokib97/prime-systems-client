@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import {
   useSendPasswordResetEmail,
   useSignInWithEmailAndPassword,
@@ -10,7 +10,6 @@ import { toast } from "react-toastify";
 import Loading from "../components/Loading";
 import auth from "../firebase.init";
 const Login = () => {
-  const [email, setEmail] = useState("");
   const navigate = useNavigate();
   const location = useLocation();
   const [signInWithGoogle, googleUser, googleLoading, googleError] =
@@ -23,6 +22,7 @@ const Login = () => {
     register,
     formState: { errors },
     handleSubmit,
+    getValues,
   } = useForm();
   const onSubmit = (data) => {
     console.log(data.email);
@@ -31,6 +31,7 @@ const Login = () => {
   let signInError;
   useEffect(() => {
     if (user || googleUser) {
+      toast.success("Logged in Successfully");
       navigate(from, { replace: true });
     }
   }, [from, navigate, user, googleUser]);
@@ -46,8 +47,7 @@ const Login = () => {
   }
   const resetPassword = async (e) => {
     e.preventDefault();
-    const emailValue = email.target.value;
-    console.log(emailValue);
+    const emailValue = getValues("email");
     if (emailValue) {
       await sendPasswordResetEmail(emailValue);
       toast.success("Please Reset Your Password");
@@ -76,7 +76,6 @@ const Login = () => {
                     value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
                     message: "Provide a valid Email",
                   },
-                  onChange: (e) => setEmail(e),
                 })}
                 type="email"
                 placeholder="Your Email"

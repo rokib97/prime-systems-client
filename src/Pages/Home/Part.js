@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import PrimaryButton from "../../components/PrimaryButton";
 
 const Part = ({ part }) => {
-  const { name, img, desc, price, minOrderQuantity, availQuantity } = part;
+  const { _id, name, img, desc, price, minOrderQuantity, availQuantity } = part;
   return (
     <div class="card max-w-:lg mx-auto px-0 bg-base-100 shadow-xl">
       <figure>
@@ -15,7 +16,9 @@ const Part = ({ part }) => {
         <p>Min Order Quantity: {minOrderQuantity}</p>
         <p>Available Quantity: {availQuantity}</p>
         <div class="card-actions justify-start">
-          <PrimaryButton>purchase</PrimaryButton>
+          <Link to={`/purchase/${_id}`}>
+            <PrimaryButton>purchase</PrimaryButton>
+          </Link>
         </div>
       </div>
     </div>

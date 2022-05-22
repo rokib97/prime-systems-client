@@ -6,6 +6,7 @@ import {
 } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import Loading from "../components/Loading";
 import auth from "../firebase.init";
 
@@ -41,7 +42,7 @@ const Signup = () => {
   const onSubmit = async (data) => {
     await createUserWithEmailAndPassword(data.email, data.password);
     await updateProfile({ displayName: data.name });
-    console.log("User Updated");
+    toast.success("Logged in Successfully");
   };
   return (
     <div className="h-full lg:h-[70vh] mt-20 flex justify-center items-center">
