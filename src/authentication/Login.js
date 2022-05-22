@@ -76,7 +76,7 @@ const Login = () => {
                     value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
                     message: "Provide a valid Email",
                   },
-                  onBlur: (e) => setEmail(e),
+                  onChange: (e) => setEmail(e),
                 })}
                 type="email"
                 placeholder="Your Email"

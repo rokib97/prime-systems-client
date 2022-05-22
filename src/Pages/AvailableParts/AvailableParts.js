@@ -5,7 +5,7 @@ import Part from "../Home/Part";
 
 const AvailableParts = () => {
   const { data: parts, isLoading } = useQuery("available", () =>
-    fetch("parts.json").then((res) => res.json())
+    fetch("http://localhost:5000/get-parts").then((res) => res.json())
   );
 
   if (isLoading) {
