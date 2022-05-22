@@ -1,5 +1,6 @@
 import React from "react";
 import { useQuery } from "react-query";
+import { Link } from "react-router-dom";
 import Part from "./Part";
 
 const Parts = () => {
@@ -17,6 +18,11 @@ const Parts = () => {
         {parts.slice(0, 6).map((part, index) => (
           <Part key={index} part={part} />
         ))}
+      </div>
+      <div className="my-8 text-right">
+        <Link to="/availableparts">
+          <button className="btn btn-primary">See All Parts</button>
+        </Link>
       </div>
     </div>
   );

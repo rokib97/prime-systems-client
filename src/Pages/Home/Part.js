@@ -10,11 +10,11 @@ const Part = ({ part }) => {
       <div class="card-body">
         <h2 class="card-title">Name: {name}</h2>
         <p>Description: {desc.slice(0, 50)}</p>
-        <p>Price: {price}</p>
+        <p>Price: ${price}</p>
         <p>Min Order Quantity: {minOrderQuantity}</p>
         <p>Available Quantity: {availQuantity}</p>
         <div class="card-actions justify-start">
-          <button class="btn btn-primary">Buy Now</button>
+          <button class="btn btn-primary">purchase</button>
         </div>
       </div>
     </div>
