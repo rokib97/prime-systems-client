@@ -47,11 +47,11 @@ const Navbar = () => {
           </ul>
         </div>
         <Link to="/" class="btn btn-ghost normal-case text-xl font-bold">
-          Computer Parts
+          Hi Tech
         </Link>
       </div>
       <div class="navbar-end hidden lg:flex font-bold ">
-        <ul class="menu menu-horizontal p-0 gap-2">
+        <ul class="menu menu-horizontal p-0 gap-1">
           <li>
             <NavLink to="/">Home</NavLink>
           </li>
