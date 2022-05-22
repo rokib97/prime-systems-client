@@ -7,7 +7,11 @@ import PurchaseModa from "./PurchaseModa";
 const Purchase = () => {
   const { id } = useParams();
 
-  const { data: singleParts, isLoading } = useQuery("parts", () =>
+  const {
+    data: singleParts,
+    isLoading,
+    refetch,
+  } = useQuery("parts", () =>
     fetch(`http://localhost:5000/get-parts/${id}`).then((res) => res.json())
   );
   const { name, price, img, desc, minOrderQuantity, availQuantity } =
@@ -37,7 +41,7 @@ const Purchase = () => {
             </label>
           </div>
 
-          <PurchaseModa singleParts={singleParts} />
+          <PurchaseModa singleParts={singleParts} refetch={refetch} />
         </div>
       </div>
     </div>

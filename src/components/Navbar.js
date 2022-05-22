@@ -7,7 +7,7 @@ const Navbar = () => {
   const [user] = useAuthState(auth);
   console.log(user);
   return (
-    <div class="navbar bg-base-100 shadow-xl relative z-50 lg:px-12">
+    <div class="navbar bg-base-100 shadow-xl relative z-50 lg:px-12 py-3">
       <div class="navbar-start">
         <div class="dropdown">
           <label tabindex="0" class="btn btn-ghost lg:hidden">
@@ -28,7 +28,7 @@ const Navbar = () => {
           </label>
           <ul
             tabindex="0"
-            class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+            class="menu menu-compact dropdown-content mt-4 p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
               <NavLink to="/">Home</NavLink>
