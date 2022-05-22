@@ -1,74 +1,74 @@
 [
   {
     "_id": 1,
-    "name": "Asus ZenBook 14",
-    "price": "500",
-    "minOrderQuantity": "15",
-    "availQuantity": "15",
-    "desc": " Asus ZenBook 14 UX425JA Core i5 10th Gen 512GB SSD 14 inch FHD Laptop with Windows 10",
-    "img": "https://i.ibb.co/nfDpC0B/xps-Gi3i-UJ1-Fwx-I-unsplash.png"
+    "name": "DEEPCOOL MATREXX 55 Gaming Case",
+    "price": "4000",
+    "minOrderQuantity": "50",
+    "availQuantity": "1000",
+    "desc": "Matrexx 55 Mesh ADD-RGB 4F is a high airflow case that comes with an included A-RGB lighting system and full size tempered glass.",
+    "img": "https://i.ibb.co/kXf5bdJ/two.png"
   },
   {
     "_id": 2,
-    "name": "Asus ZenBook 14",
-    "price": "500",
-    "minOrderQuantity": "15",
-    "availQuantity": "15",
-    "desc": "Apple iPhone 13 Pro ; CPU, Hexa-core (2x3.23 GHz Avalanche + 4x1.82 GHz Blizzard) ; GPU, Apple GPU (5-core graphics) ; Memory, Card slot ; Internal, 128GB 6GB RAM, ...",
-    "img": "https://i.ibb.co/twRZ0zk/sahej-brar-Gc-Fn6g5n-J00-unsplash.png"
+    "name": "A320M-HDV R4.0  Motherboard",
+    "price": "5000",
+    "minOrderQuantity": "100",
+    "availQuantity": "2000",
+    "desc": "The PCIe Gen3 x4 Ultra M.2 interface pushes data transfer speeds up to 32Gb/s. In addition, it also supports SATA3 6Gb/s M.2 modules, and is compatible with ASRock’s U.2 Kit for installing some of the world’s fastest U.2 PCIe Gen3 x4 SSDs",
+    "img": "https://i.ibb.co/5vvNX0F/three.png"
   },
   {
     "_id": 3,
-    "name": "Asus ZenBook 14",
-    "price": "500",
-    "minOrderQuantity": "15",
-    "availQuantity": "15",
-    "desc": "Apple iPad Pro 12.9 (2020) tablet. Announced Mar 2020. Features 12.9″ display, Apple A12Z Bionic chipset, 9720 mAh battery, 1024 GB storage, 6 GB RAM, ",
-    "img": "https://i.ibb.co/BKsRc6H/rahul-chakraborty-2q-Krvxg-Ps-Q8-unsplash.png"
+    "name": "i3-12100 12th Gen Alder Lake Processor",
+    "price": "8000",
+    "minOrderQuantity": "100",
+    "availQuantity": "2000",
+    "desc": "The latest Core i3-12100 12th Gen Alder Lake Processor features 4 cores and 8 threads. The CPU will operate at a base frequency of 3.30 GHz and a maximum boost frequency of up to 4.30 GHz",
+    "img": "https://i.ibb.co/P5vhWps/six.png"
   },
   {
     "_id": 4,
-    "name": "Asus ZenBook 14",
-    "price": "500",
-    "minOrderQuantity": "15",
-    "availQuantity": "15",
-    "desc": "The new iMac. 7 vibrant colors. Impossibly thin design. 24-inch 4.5K Retina display. The best camera, mics, and speakers in a Mac. Supercharged by M1.",
-    "img": "https://i.ibb.co/yPT7Jzp/marta-filipczyk-ZXNqu-SCc-BSc-unsplash.png"
+    "name": "Z1 ARGB 120mm Casing Fan",
+    "price": "1000",
+    "minOrderQuantity": "50",
+    "availQuantity": "3000",
+    "desc": "The  Z1 ARGB Casing Fan features a Dual-Ring Design. The dual ring lighting effect design makes the outstanding visual performance. It delivers 1200 RPM ± 10% speed and has a noise level of 25 dBA which makes it functional and quiet",
+    "img": "https://i.ibb.co/0hyFB8x/one.png"
   },
   {
     "_id": 5,
-    "name": "Asus ZenBook 14",
-    "price": "500",
-    "minOrderQuantity": "15",
-    "availQuantity": "15",
-    "desc": "SAMSUNG LF22T350 comes with 22 75Hz Full HD IPS LED Display. The SAMSUNG monitor featured with 3-sided borderless display brings a clean and modern aesthetic to any working environment.",
-    "img": "https://i.ibb.co/fGj04GN/kirill-martynov-x-Zo-NX2slte-U-unsplash.png"
+    "name": "SPARK AIO Lite ARGB 240mn CPU Liquid Cooler",
+    "price": "2000",
+    "minOrderQuantity": "100",
+    "availQuantity": "500",
+    "desc": "The ZADAK SPARK AIO Lite ARGB 240mn CPU Liquid Cooler offers an alternative cooling solution for end users all over the world who are suffering from overheating issues.",
+    "img": "https://i.ibb.co/km0tqz0/seven.png"
   },
   {
     "_id": 6,
-    "name": "Asus ZenBook 14",
-    "price": "500",
-    "minOrderQuantity": "15",
-    "availQuantity": "15",
-    "desc": "Bose Noise Cancelling Headphones 700, Bluetooth, Over-Ear Wireless Headphones with Built-In Microphone for Clear Calls & Alexa Voice Control, Black",
-    "img": "https://i.ibb.co/xLZ8sYx/dollar-gill-i-C5f0o-ZNTLw-unsplash.png"
+    "name": "1TB 3.5 Surveillance Hard Drive",
+    "price": "3500",
+    "minOrderQuantity": "20",
+    "availQuantity": "500",
+    "desc": "Seagate SkyHawk 1TB Surveillance Hard Drive - SATA 6Gb/s 64MB Cache 3.5-Inch Internal Drive Custom-built for surveillance applications with Image Perfect firmware for crisp, clear, 24×7 video workloads",
+    "img": "https://i.ibb.co/R6SwJ8k/four.png"
   },
   {
     "_id": 7,
-    "name": "Asus ZenBook 14",
-    "price": "500",
-    "minOrderQuantity": "15",
-    "availQuantity": "15",
-    "desc": "Model number: HAC-001(-01) (product serial number begins with “XKW”) This model includes battery life of approximately 4.5 - 9 hours. The battery life will depend on the games you play. For instance, the battery will last approximately 5.5 hours for The Legend of Zelda: Breath of the Wild (games sold separately).",
-    "img": "https://i.ibb.co/b1tHHJH/erik-mclean-Ed-UYo2-Y435s-unsplash.png"
+    "name": "FURY Beast 16GB 5200MHz DDR5 Desktop RAM",
+    "price": "1500",
+    "minOrderQuantity": "50",
+    "availQuantity": "250",
+    "desc": " FURY Beast comes with 16GB Capacity, 5200MHz Speed, DDR5 Type, and CL40 Latency. The Desktop RAM supports Intel Extreme Memory Profiles (Intel XMP) 3.0. and also this RAM has been tested to run at DDR5-5200 at low latency",
+    "img": "https://i.ibb.co/WKhVjWr/five.png"
   },
   {
     "_id": 8,
-    "name": "Asus ZenBook 14",
-    "price": "500",
-    "minOrderQuantity": "15",
-    "availQuantity": "15",
-    "desc": "Bose Home Speaker 500: Smart Bluetooth Speaker with Alexa Voice Control Built-in, White",
-    "img": "https://i.ibb.co/xgcjYxR/shakti-rajpurohit-8-Os8u1-TDXu0-unsplash.png"
+    "name": "GeForce RTX 3070 Ti MASTER 8GB GDDR6X Graphics Card",
+    "price": "5500",
+    "minOrderQuantity": "50",
+    "availQuantity": "1000",
+    "desc": "AORUS GeForce RTX 3070 Ti MASTER features MAX-Covered cooling. The MAX-Covered cooling features two 115mm and one 100mm unique blade stack fans with wind claw design and alternate spinning, so the air pressure can completely cover the heatsink",
+    "img": "https://i.ibb.co/cC4jty8/eight.png"
   }
 ]

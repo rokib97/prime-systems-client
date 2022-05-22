@@ -44,7 +44,7 @@ const Signup = () => {
     console.log("User Updated");
   };
   return (
-    <div className="h-screen flex justify-center items-center">
+    <div className="h-full lg:h-[70vh] mt-20 flex justify-center items-center">
       <div className="card w-96 bg-base-100 shadow-xl">
         <div className="card-body">
           <h2 className="text-center text-2xl font-bold">Sign Up</h2>

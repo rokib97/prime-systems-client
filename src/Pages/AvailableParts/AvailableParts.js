@@ -1,5 +1,6 @@
 import React from "react";
 import { useQuery } from "react-query";
+import Loading from "../../components/Loading";
 import Part from "../Home/Part";
 
 const AvailableParts = () => {
@@ -8,7 +9,7 @@ const AvailableParts = () => {
   );
 
   if (isLoading) {
-    return "loading...";
+    return <Loading />;
   }
   return (
     <div className="lg:px-20">

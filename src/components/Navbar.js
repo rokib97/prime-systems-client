@@ -47,7 +47,7 @@ const Navbar = () => {
           </ul>
         </div>
         <Link to="/" class="btn btn-ghost normal-case text-xl font-bold">
-          Hi Tech
+          Prime Systems
         </Link>
       </div>
       <div class="navbar-end hidden lg:flex font-bold ">

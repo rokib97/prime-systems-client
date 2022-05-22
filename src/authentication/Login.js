@@ -44,17 +44,20 @@ const Login = () => {
       </p>
     );
   }
-  const resetPassword = async () => {
+  const resetPassword = async (e) => {
+    e.preventDefault();
     const emailValue = email.target.value;
+    console.log(emailValue);
     if (emailValue) {
       await sendPasswordResetEmail(emailValue);
+      toast.success("Please Reset Your Password");
     } else {
       toast.error("Please Enter Email First!");
     }
   };
 
   return (
-    <div className="h-screen flex justify-center items-center">
+    <div className="h-full lg:h-[70vh] mt-20  flex justify-center items-center">
       <div className="card w-96 bg-base-100 shadow-xl">
         <div className="card-body">
           <h2 className="text-center text-2xl font-bold">Login</h2>
