@@ -42,7 +42,7 @@ const MyOrder = () => {
                 <td>{order.userEmail}</td>
                 <td>${order.totalPrice}</td>
                 <td>
-                  {order?.price && (
+                  {order?.price && !order?.paid && (
                     <Link to={`/dashboard/payment/${order._id}`}>
                       <button class="btn btn-success text-white btn-xs">
                         Pay
@@ -51,10 +51,15 @@ const MyOrder = () => {
                   )}
                 </td>
                 <td>
-                  {order?.price && (
-                    <span className="text-info text-xl text-bold ml-2">
-                      Paid
-                    </span>
+                  {order?.price && order?.paid && (
+                    <>
+                      <span className="text-info">Paid</span>
+                      <p>
+                        <span className="text-error">
+                          Transaction Id : {order.transactionId}
+                        </span>
+                      </p>
+                    </>
                   )}
                 </td>
                 <td>

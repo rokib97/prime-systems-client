@@ -9,7 +9,7 @@ const CheckoutForm = ({ purchase }) => {
   const [processing, setProcessing] = useState(false);
   const [transactionId, setTransactionId] = useState("");
   const [clientSecret, setClientSecret] = useState("");
-  const { totalPrice, userName, userEmail } = purchase;
+  const { _id, totalPrice, userName, userEmail } = purchase;
   useEffect(() => {
     fetch("http://localhost:5000/create-payment-intent", {
       method: "POST",
@@ -66,13 +66,22 @@ const CheckoutForm = ({ purchase }) => {
       setTransactionId(paymentIntent.id);
       console.log(paymentIntent);
       setSuccess("Congrats! Your payment is completed.");
-
-      //   // store payment on database
-      //   const payment = {
-      //     appoinment: _id,
-      //     transactionId: paymentIntent.id,
-      //   };
-      // }
+      // store payment on database
+      const payment = {
+        orderId: _id,
+        transactionId: paymentIntent.id,
+      };
+      fetch(`http://localhost:5000/update-purchase/${_id}`, {
+        method: "PATCH",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(payment),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          setProcessing(false);
+        });
     }
   };
   return (
