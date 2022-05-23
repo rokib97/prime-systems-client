@@ -19,7 +19,7 @@ const Dashboard = () => {
       </div>
       <div className="drawer-side">
         <label for="dashbord-sidebar" className="drawer-overlay"></label>
-        <ul className="menu p-4 overflow-y-auto w-48 bg-base-100 text-base-content">
+        <ul className="menu p-4 overflow-y-auto w-52 bg-base-100 text-base-content">
           {/* <!-- Sidebar content here --> */}
           {!admin && (
             <>
@@ -43,21 +43,17 @@ const Dashboard = () => {
               <li className="mb-1">
                 <Link to="/dashboard/profile">My Profile</Link>
               </li>
+              <li className="mb-1">
+                <Link to="/dashboard/addproduct">Add A Product</Link>
+              </li>
+              <li className="mb-1">
+                <Link to="/dashboard/manageorder">Manage Orders</Link>
+              </li>
+              <li className="mb-1">
+                <Link to="/dashboard/manageproduct">Manage Products</Link>
+              </li>
             </>
           )}
-          {/* <li>
-            {admin && (
-              <>
-                <Link className="mb-1" to="/dashboard/users">
-                  All Users
-                </Link>
-                <Link className="mb-1" to="/dashboard/addDoctor">
-                  Add A Doctor
-                </Link>
-                <Link to="/dashboard/manageDoctor">Manage Doctors</Link>
-              </>
-            )}
-          </li> */}
         </ul>
       </div>
     </div>

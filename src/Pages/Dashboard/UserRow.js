@@ -1,4 +1,5 @@
 import React from "react";
+import { toast } from "react-toastify";
 
 const UserRow = ({ user, refetch, index }) => {
   const { email, role } = user;
@@ -14,7 +15,7 @@ const UserRow = ({ user, refetch, index }) => {
       })
       .then((data) => {
         refetch();
-        console.log(data);
+        toast.success("Successfully Make abn Admin");
       });
   };
   return (
