@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Login from "./authentication/Login";
+import PrivateAdmin from "./authentication/PrivateAdmin";
 import PrivateRoute from "./authentication/PrivateRoute";
 import Signup from "./authentication/Signup";
 import Navbar from "./components/Navbar";
@@ -36,7 +37,14 @@ function App() {
           <Route index element={<MyOrder />}></Route>
           <Route path="review" element={<MyReview />}></Route>
           <Route path="profile" element={<MyProfile />}></Route>
-          <Route path="admin" element={<MakeAdmin />}></Route>
+          <Route
+            path="admin"
+            element={
+              <PrivateAdmin>
+                <MakeAdmin />
+              </PrivateAdmin>
+            }
+          ></Route>
         </Route>
         <Route
           path="/purchase/:id"

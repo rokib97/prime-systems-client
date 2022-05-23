@@ -1,7 +1,12 @@
 import React from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { Link, Outlet } from "react-router-dom";
+import auth from "../../firebase.init";
+import useAdmin from "../../hooks/useAdmin";
 
 const Dashboard = () => {
+  const [user] = useAuthState(auth);
+  const [admin] = useAdmin(user);
   return (
     <div className="drawer drawer-mobile">
       <input id="dashbord-sidebar" type="checkbox" className="drawer-toggle" />
@@ -16,18 +21,30 @@ const Dashboard = () => {
         <label for="dashbord-sidebar" className="drawer-overlay"></label>
         <ul className="menu p-4 overflow-y-auto w-48 bg-base-100 text-base-content">
           {/* <!-- Sidebar content here --> */}
-          <li className="mb-1">
-            <Link to="/dashboard">My Orders</Link>
-          </li>
-          <li className="mb-1">
-            <Link to="/dashboard/review">Add A Review</Link>
-          </li>
-          <li className="mb-1">
-            <Link to="/dashboard/profile">My Profile</Link>
-          </li>
-          <li className="mb-1">
-            <Link to="/dashboard/admin">Make Admin</Link>
-          </li>
+          {!admin && (
+            <>
+              {" "}
+              <li className="mb-1">
+                <Link to="/dashboard">My Orders</Link>
+              </li>
+              <li className="mb-1">
+                <Link to="/dashboard/review">Add A Review</Link>
+              </li>
+              <li className="mb-1">
+                <Link to="/dashboard/profile">My Profile</Link>
+              </li>
+            </>
+          )}
+          {admin && (
+            <>
+              <li className="mb-1">
+                <Link to="/dashboard/admin">Make Admin</Link>
+              </li>
+              <li className="mb-1">
+                <Link to="/dashboard/profile">My Profile</Link>
+              </li>
+            </>
+          )}
           {/* <li>
             {admin && (
               <>
