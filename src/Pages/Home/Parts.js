@@ -1,6 +1,7 @@
 import React from "react";
 import { useQuery } from "react-query";
 import { Link } from "react-router-dom";
+import Loading from "../../components/Loading";
 import PrimaryButton from "../../components/PrimaryButton";
 import Part from "./Part";
 
@@ -10,7 +11,7 @@ const Parts = () => {
   );
 
   if (isLoading) {
-    return "loading...";
+    return <Loading />;
   }
   return (
     <div className="my-8 lg:px-20">

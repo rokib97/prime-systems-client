@@ -1,21 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { toast } from "react-toastify";
 import auth from "../../firebase.init";
 
 const PurchaseModa = ({ singleParts, refetch }) => {
+  const [quantity, setQuantity] = useState(0);
   const { _id, name, price, img, desc, minOrderQuantity, availQuantity } =
     singleParts || {};
+
+  const newQuantity = parseInt(quantity) || 0;
+  const newMinQuantity = parseInt(minOrderQuantity);
+  const newavlQuantity = parseInt(availQuantity);
   const [user] = useAuthState(auth);
+
   const handlePurchase = (event) => {
     event.preventDefault();
-    const userQuantity = event.target.quantity.value;
-    if (userQuantity < minOrderQuantity) {
-      toast.error(
-        `You can not order less than min order quantity${minOrderQuantity}`
-      );
-    }
-    const updatedQuantity = availQuantity - userQuantity;
+    let order = {
+      partsId: _id,
+      partsName: name,
+      quantity: quantity || minOrderQuantity,
+      userName: user.displayName,
+      userEmail: user.email,
+      img,
+      price,
+      phone: event.target.phone.value,
+    };
+    const totalPrice = order.quantity * order.price;
+    order = { ...order, totalPrice };
+
+    // purchse order
+    fetch("http://localhost:5000/add-parts", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(order),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        toast.success("Order Placed Successfully");
+      });
+
+    //update wuantity
+    const updatedQuantity = availQuantity - quantity;
     fetch(`http://localhost:5000/get-parts/${_id}`, {
       method: "PUT",
       headers: {
@@ -26,8 +53,9 @@ const PurchaseModa = ({ singleParts, refetch }) => {
       .then((res) => res.json())
       .then((data) => {
         refetch();
-        console.log(data);
       });
+
+    event.target.reset();
   };
   return (
     <div>
@@ -72,13 +100,16 @@ const PurchaseModa = ({ singleParts, refetch }) => {
             ></textarea>
             <input
               type="number"
-              name="quantity"
+              onChange={(e) => setQuantity(e.target.value)}
               placeholder={`Select at least min quantity ${minOrderQuantity}`}
               className="input input-bordered w-full max-w-xs"
             />
             <input
               type="submit"
               value="Confirm Purchase"
+              disabled={
+                newQuantity < newMinQuantity || newQuantity > newavlQuantity
+              }
               className="btn btn-secondary bg-gradient-to-r from-secondary to-primary w-full max-w-xs text-white"
             />
           </form>
