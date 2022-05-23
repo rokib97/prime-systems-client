@@ -25,6 +25,9 @@ const Dashboard = () => {
           <li className="mb-1">
             <Link to="/dashboard/profile">My Profile</Link>
           </li>
+          <li className="mb-1">
+            <Link to="/dashboard/admin">Make Admin</Link>
+          </li>
           {/* <li>
             {admin && (
               <>

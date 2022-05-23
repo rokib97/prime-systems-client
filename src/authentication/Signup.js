@@ -9,6 +9,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import Loading from "../components/Loading";
 import auth from "../firebase.init";
+import useToken from "../hooks/useToken";
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -23,6 +24,7 @@ const Signup = () => {
     handleSubmit,
   } = useForm();
 
+  const [token] = useToken(user || googleUser);
   let signInError;
   if (loading || googleLoading || updating) {
     return <Loading></Loading>;

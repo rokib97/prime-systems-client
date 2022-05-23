@@ -8,6 +8,7 @@ import Navbar from "./components/Navbar";
 import AvailableParts from "./Pages/AvailableParts/AvailableParts";
 import Blogs from "./Pages/Blogs/Blogs";
 import Dashboard from "./Pages/Dashboard/Dashboard";
+import MakeAdmin from "./Pages/Dashboard/MakeAdmin";
 import MyOrder from "./Pages/Dashboard/MyOrder";
 import MyProfile from "./Pages/Dashboard/MyProfile";
 import MyReview from "./Pages/Dashboard/MyReview";
@@ -35,6 +36,7 @@ function App() {
           <Route index element={<MyOrder />}></Route>
           <Route path="review" element={<MyReview />}></Route>
           <Route path="profile" element={<MyProfile />}></Route>
+          <Route path="admin" element={<MakeAdmin />}></Route>
         </Route>
         <Route
           path="/purchase/:id"

@@ -113,7 +113,7 @@ const PurchaseModa = ({ singleParts, refetch }) => {
             <input
               type="number"
               onChange={(e) => setQuantity(e.target.value)}
-              placeholder="Quantity"
+              placeholder={`Min Order Quantity is ${minOrderQuantity}`}
               className="input input-bordered w-full max-w-xs"
             />
             {quantity ? <p className="text-red-500">{error}</p> : ""}
