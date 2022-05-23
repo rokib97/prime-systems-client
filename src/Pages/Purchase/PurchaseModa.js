@@ -6,7 +6,7 @@ import auth from "../../firebase.init";
 const PurchaseModa = ({ singleParts, refetch }) => {
   const [quantity, setQuantity] = useState(0);
   const [error, setError] = useState("");
-  const { _id, name, price, img, desc, minOrderQuantity, availQuantity } =
+  const { _id, name, price, img, minOrderQuantity, availQuantity } =
     singleParts || {};
 
   const newQuantity = parseInt(quantity) || 0;
