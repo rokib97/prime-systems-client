@@ -29,6 +29,7 @@ const MyOrder = () => {
               <th>Email</th>
               <th>Total Price</th>
               <th>Payment</th>
+              <th>Status</th>
               <th>Action</th>
             </tr>
           </thead>
@@ -39,7 +40,7 @@ const MyOrder = () => {
                 <td>{order.userName}</td>
                 <td>{order.partsName}</td>
                 <td>{order.userEmail}</td>
-                <td>{order.totalPrice}</td>
+                <td>${order.totalPrice}</td>
                 <td>
                   {order?.price && (
                     <Link to={`/dashboard/payment/${order._id}`}>
@@ -48,8 +49,12 @@ const MyOrder = () => {
                       </button>
                     </Link>
                   )}
+                </td>
+                <td>
                   {order?.price && (
-                    <span className="text-success ml-2">Paid</span>
+                    <span className="text-info text-xl text-bold ml-2">
+                      Paid
+                    </span>
                   )}
                 </td>
                 <td>
