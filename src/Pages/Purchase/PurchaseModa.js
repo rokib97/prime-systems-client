@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { toast } from "react-toastify";
 import auth from "../../firebase.init";
 
 const PurchaseModa = ({ singleParts, refetch }) => {
   const [quantity, setQuantity] = useState(0);
+  const [error, setError] = useState("");
   const { _id, name, price, img, desc, minOrderQuantity, availQuantity } =
     singleParts || {};
 
@@ -12,6 +13,16 @@ const PurchaseModa = ({ singleParts, refetch }) => {
   const newMinQuantity = parseInt(minOrderQuantity);
   const newavlQuantity = parseInt(availQuantity);
   const [user] = useAuthState(auth);
+
+  useEffect(() => {
+    if (newQuantity < newMinQuantity) {
+      setError(`Min Order Quantity is ${newMinQuantity}`);
+    } else if (newQuantity > newavlQuantity) {
+      setError(`Max Order Quantity is ${newavlQuantity}`);
+    } else {
+      setError("");
+    }
+  }, [newQuantity, newMinQuantity, newavlQuantity]);
 
   const handlePurchase = (event) => {
     event.preventDefault();
@@ -25,6 +36,7 @@ const PurchaseModa = ({ singleParts, refetch }) => {
       price,
       phone: event.target.phone.value,
     };
+
     const totalPrice = order.quantity * order.price;
     order = { ...order, totalPrice };
 
@@ -101,9 +113,10 @@ const PurchaseModa = ({ singleParts, refetch }) => {
             <input
               type="number"
               onChange={(e) => setQuantity(e.target.value)}
-              placeholder={`Select at least min quantity ${minOrderQuantity}`}
+              placeholder="Quantity"
               className="input input-bordered w-full max-w-xs"
             />
+            {quantity ? <p className="text-red-500">{error}</p> : ""}
             <input
               type="submit"
               value="Confirm Purchase"
