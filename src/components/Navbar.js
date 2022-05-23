@@ -7,7 +7,7 @@ const Navbar = () => {
   const [user] = useAuthState(auth);
   console.log(user);
   return (
-    <div class="navbar bg-base-100 shadow-xl relative z-50 lg:px-12 py-3">
+    <div class="navbar bg-base-100 sticky top-0 shadow-xl z-50 py-3 lg:px-12">
       <div class="navbar-start">
         <div class="dropdown">
           <label tabindex="0" class="btn btn-ghost lg:hidden">
@@ -36,7 +36,11 @@ const Navbar = () => {
             <li>
               <NavLink to="/availableparts">Available Parts</NavLink>
             </li>
-
+            {user && (
+              <li>
+                <NavLink to="/dashboard">Dashboard</NavLink>
+              </li>
+            )}
             <li>
               <NavLink to="/blogs">Blogs</NavLink>
             </li>
@@ -66,7 +70,29 @@ const Navbar = () => {
           Prime Systems
         </Link>
       </div>
-      <div class="navbar-end hidden lg:flex font-bold ">
+      <div className="navbar-end">
+        <label
+          tabIndex="1"
+          for="dashbord-sidebar"
+          className="btn btn-ghost lg:hidden"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h8m-8 6h16"
+            />
+          </svg>
+        </label>
+      </div>
+      <div class="navbar-center hidden lg:flex font-bold ">
         <ul class="menu menu-horizontal p-0 gap-1">
           <li>
             <NavLink to="/">Home</NavLink>
