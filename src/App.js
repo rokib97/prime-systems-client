@@ -7,6 +7,7 @@ import Signup from "./authentication/Signup";
 import Navbar from "./components/Navbar";
 import AvailableParts from "./Pages/AvailableParts/AvailableParts";
 import Blogs from "./Pages/Blogs/Blogs";
+import Dashboard from "./Pages/Dashboard/Dashboard";
 import Home from "./Pages/Home/Home";
 import MyPortfolio from "./Pages/MyPortfolio/MyPortfolio";
 import Purchase from "./Pages/Purchase/Purchase";
@@ -20,6 +21,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/availableparts" element={<AvailableParts />} />
+        <Route path="/dashboard" element={<Dashboard />} />
         <Route
           path="/purchase/:id"
           element={

@@ -44,7 +44,11 @@ const Navbar = () => {
             <li>
               <NavLink to="/portfolio">Portfolio</NavLink>
             </li>
-
+            {user && (
+              <li>
+                <NavLink to="/portfolio">{user.displayName}</NavLink>
+              </li>
+            )}
             {user ? (
               <li>
                 <NavLink onClick={() => signOut(auth)} to="/login">
@@ -70,6 +74,11 @@ const Navbar = () => {
           <li>
             <NavLink to="/availableparts">Available Parts</NavLink>
           </li>
+          {user && (
+            <li>
+              <NavLink to="/dashboard">Dashboard</NavLink>
+            </li>
+          )}
           <li>
             <NavLink to="/blogs">Blogs</NavLink>
           </li>
@@ -78,17 +87,37 @@ const Navbar = () => {
             <NavLink to="/portfolio">Portfolio</NavLink>
           </li>
 
-          {user ? (
-            <li>
-              <NavLink onClick={() => signOut(auth)} to="/login">
-                LogOut
-              </NavLink>
-            </li>
-          ) : (
-            <li>
-              <NavLink to="/login">Login</NavLink>
-            </li>
-          )}
+          <div class="dropdown dropdown-end">
+            <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+              <div class="w-10 rounded-full">
+                <img
+                  src="https://api.lorem.space/image/face?hash=33791"
+                  alt=""
+                />
+              </div>
+            </label>
+            <ul
+              tabindex="0"
+              class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              {user && (
+                <li>
+                  <NavLink to="/portfolio">{user.displayName}</NavLink>
+                </li>
+              )}
+              {user ? (
+                <li>
+                  <NavLink onClick={() => signOut(auth)} to="/login">
+                    LogOut
+                  </NavLink>
+                </li>
+              ) : (
+                <li>
+                  <NavLink to="/login">Login</NavLink>
+                </li>
+              )}
+            </ul>
+          </div>
         </ul>
       </div>
     </div>
