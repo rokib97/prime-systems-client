@@ -17,7 +17,6 @@ const MyReview = () => {
     };
     axios.post("http://localhost:5000/add-review", review).then((res) => {
       toast.success("Review Added Successfully");
-      console.log(res);
     });
     e.target.reset();
   };

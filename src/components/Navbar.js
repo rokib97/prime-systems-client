@@ -5,7 +5,7 @@ import { Link, NavLink } from "react-router-dom";
 import auth from "../firebase.init";
 const Navbar = () => {
   const [user] = useAuthState(auth);
-  console.log(user);
+  // console.log(user);
   return (
     <div class="navbar bg-base-100 sticky top-0 shadow-xl z-50 py-3 lg:px-12">
       <div class="navbar-start">

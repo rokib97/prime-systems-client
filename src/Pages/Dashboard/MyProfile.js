@@ -1,10 +1,20 @@
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { useQuery } from "react-query";
+import { Link } from "react-router-dom";
+import Loading from "../../components/Loading";
 import auth from "../../firebase.init";
 
 const MyProfile = () => {
   const [user] = useAuthState(auth);
-  console.log(user);
+  const { data: users, isLoading } = useQuery("available", () =>
+    fetch(`http://localhost:5000/user/${user.email}`).then((res) => res.json())
+  );
+
+  if (isLoading) {
+    return <Loading />;
+  }
+  const { _id } = users;
   return (
     <div>
       <h2 className="text-2xl mb-2">Welcome Your Profile</h2>
@@ -25,9 +35,15 @@ const MyProfile = () => {
             </div>
             <div>
               <h2 className="card-title">Name: {user?.displayName}</h2>
-
               <p>Email: {user.email}</p>
             </div>
+          </div>
+          <div class="card-actions justify-end">
+            <Link to={`updateprofile/${_id}`}>
+              <button class="btn btn-primary text-uppercase text-white font-bold bg-gradient-to-r from-secondary to-primary">
+                Update Profile
+              </button>
+            </Link>
           </div>
         </div>
       </div>

@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import PrimaryButton from "../../components/PrimaryButton";
 
 const Part = ({ part }) => {
-  const { _id, name, img, desc, price, minOrderQuantity, availQuantity } = part;
+  const { _id, name, img, desc, price, minOrderQuantity, availQuantity } =
+    part || {};
   return (
     <div class="card max-w-:lg mx-auto px-0 bg-base-100 shadow-xl">
       <figure>

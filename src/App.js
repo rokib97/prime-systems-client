@@ -6,7 +6,6 @@ import PrivateAdmin from "./authentication/PrivateAdmin";
 import PrivateRoute from "./authentication/PrivateRoute";
 import Signup from "./authentication/Signup";
 import Navbar from "./components/Navbar";
-import useAdmin from "./hooks/useAdmin";
 import AvailableParts from "./Pages/AvailableParts/AvailableParts";
 import Blogs from "./Pages/Blogs/Blogs";
 import AddProduct from "./Pages/Dashboard/AddProduct";
@@ -18,12 +17,12 @@ import MyOrder from "./Pages/Dashboard/MyOrder";
 import MyProfile from "./Pages/Dashboard/MyProfile";
 import MyReview from "./Pages/Dashboard/MyReview";
 import Payment from "./Pages/Dashboard/Payment";
+import UpdateProfile from "./Pages/Dashboard/UpdateProfile";
 import Home from "./Pages/Home/Home";
 import MyPortfolio from "./Pages/MyPortfolio/MyPortfolio";
 import Purchase from "./Pages/Purchase/Purchase";
 
 function App() {
-  const [admin] = useAdmin();
   return (
     <div>
       <Navbar />
@@ -42,6 +41,7 @@ function App() {
         >
           <Route index element={<MyProfile />}></Route>
           <Route path="review" element={<MyReview />}></Route>
+          <Route path="updateprofile/:id" element={<UpdateProfile />}></Route>
           <Route path="order" element={<MyOrder />}></Route>
           <Route path="payment/:id" element={<Payment />}></Route>
           <Route path="addproduct" element={<AddProduct />}></Route>

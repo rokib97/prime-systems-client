@@ -41,7 +41,7 @@ const PurchaseModa = ({ singleParts, refetch }) => {
     order = { ...order, totalPrice };
 
     // purchse order
-    fetch("http://localhost:5000/add-parts", {
+    fetch("http://localhost:5000/add-purchase", {
       method: "POST",
       headers: {
         "content-type": "application/json",

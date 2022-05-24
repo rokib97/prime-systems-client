@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
 const ManageProducts = () => {
   const [parts, setParts] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/get-parts`)
+    fetch(`http://localhost:5000/get-adminparts`)
       .then((res) => res.json())
       .then((data) => {
         setParts(data);
