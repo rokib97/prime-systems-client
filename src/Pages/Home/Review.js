@@ -1,8 +1,10 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
+
 const Review = ({ review }) => {
   const { name, ureview, location, img, ratings } = review;
   const number = parseInt(ratings);
+
   return (
     <>
       <div className="card lg:max-w-lg bg-base-100 shadow-xl">

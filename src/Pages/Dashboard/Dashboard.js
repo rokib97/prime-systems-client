@@ -23,26 +23,26 @@ const Dashboard = () => {
           {/* <!-- Sidebar content here --> */}
           {!admin && (
             <>
-              {" "}
               <li className="mb-1">
-                <Link to="/dashboard">My Orders</Link>
+                <Link to="/dashboard">My Profile</Link>
+              </li>
+              <li className="mb-1">
+                <Link to="/dashboard/order">My Orders</Link>
               </li>
               <li className="mb-1">
                 <Link to="/dashboard/review">Add A Review</Link>
-              </li>
-              <li className="mb-1">
-                <Link to="/dashboard/profile">My Profile</Link>
               </li>
             </>
           )}
           {admin && (
             <>
               <li className="mb-1">
-                <Link to="/dashboard/admin">Make Admin</Link>
+                <Link to="/dashboard">My Profile</Link>
               </li>
               <li className="mb-1">
-                <Link to="/dashboard/profile">My Profile</Link>
+                <Link to="/dashboard/admin">Make Admin</Link>
               </li>
+
               <li className="mb-1">
                 <Link to="/dashboard/addproduct">Add A Product</Link>
               </li>

@@ -6,6 +6,7 @@ import PrivateAdmin from "./authentication/PrivateAdmin";
 import PrivateRoute from "./authentication/PrivateRoute";
 import Signup from "./authentication/Signup";
 import Navbar from "./components/Navbar";
+import useAdmin from "./hooks/useAdmin";
 import AvailableParts from "./Pages/AvailableParts/AvailableParts";
 import Blogs from "./Pages/Blogs/Blogs";
 import AddProduct from "./Pages/Dashboard/AddProduct";
@@ -22,6 +23,7 @@ import MyPortfolio from "./Pages/MyPortfolio/MyPortfolio";
 import Purchase from "./Pages/Purchase/Purchase";
 
 function App() {
+  const [admin] = useAdmin();
   return (
     <div>
       <Navbar />
@@ -38,9 +40,9 @@ function App() {
             </PrivateRoute>
           }
         >
-          <Route index element={<MyOrder />}></Route>
+          <Route index element={<MyProfile />}></Route>
           <Route path="review" element={<MyReview />}></Route>
-          <Route path="profile" element={<MyProfile />}></Route>
+          <Route path="order" element={<MyOrder />}></Route>
           <Route path="payment/:id" element={<Payment />}></Route>
           <Route path="addproduct" element={<AddProduct />}></Route>
           <Route path="manageorder" element={<ManageAllOrder />}></Route>

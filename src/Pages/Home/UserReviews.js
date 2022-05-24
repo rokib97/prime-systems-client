@@ -2,6 +2,7 @@ import React from "react";
 import { useQuery } from "react-query";
 import Loading from "../../components/Loading";
 import Review from "./Review";
+
 const UserReviews = () => {
   const { data: reviews, isLoading } = useQuery("review", () =>
     fetch("http://localhost:5000/get-review").then((res) => res.json())

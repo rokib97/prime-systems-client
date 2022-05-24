@@ -42,7 +42,7 @@ const MyOrder = () => {
   };
   return (
     <div>
-      <h2 className="text-2xl">Orders : {orders.length}</h2>
+      <h2 className="text-2xl">Your Orders : {orders.length}</h2>
       <div class="overflow-x-auto">
         <table class="table  table-compact w-full">
           <thead>

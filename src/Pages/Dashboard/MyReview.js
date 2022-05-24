@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
-import PrimaryButton from "../../components/PrimaryButton";
+import { toast } from "react-toastify";
 
 const MyReview = () => {
   const [imgURL, setImgURL] = useState("");
@@ -15,11 +15,11 @@ const MyReview = () => {
       ureview: e.target.review.value,
       img: imgURL,
     };
-    axios
-      .post("http://localhost:5000/add-review", review)
-      .then((res) => console.log(res));
+    axios.post("http://localhost:5000/add-review", review).then((res) => {
+      toast.success("Review Added Successfully");
+      console.log(res);
+    });
     e.target.reset();
-    console.log(review);
   };
 
   const handleUploadImage = (e) => {
@@ -60,10 +60,12 @@ const MyReview = () => {
                 <input
                   type="text"
                   name="name"
+                  required
                   placeholder="Your Name"
                   className="input input-bordered w-full max-w-md"
                 />
                 <input
+                  required
                   type="number"
                   name="ratings"
                   placeholder="Your Ratings"
@@ -71,11 +73,13 @@ const MyReview = () => {
                 />
                 <input
                   type="text"
+                  required
                   name="location"
                   placeholder="Your Location"
                   className="input input-bordered w-full max-w-md"
                 />
                 <textarea
+                  required
                   name="review"
                   className="textarea input-bordered w-full max-w-md"
                   placeholder="Your review"
@@ -87,7 +91,12 @@ const MyReview = () => {
                   placeholder="Your Image"
                   className="w-full max-w-xs"
                 />
-                <PrimaryButton>Sumbit</PrimaryButton>
+                <button
+                  disabled={!imgURL ? true : false}
+                  className="btn btn-primary text-uppercase text-white font-bold bg-gradient-to-r from-secondary to-primary"
+                >
+                  Sumbit
+                </button>
               </div>
             </form>
           </div>
