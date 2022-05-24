@@ -55,7 +55,7 @@ const PurchaseModa = ({ singleParts, refetch }) => {
 
     //update wuantity
     const updatedQuantity = availQuantity - quantity;
-    fetch(`http://localhost:5000/get-parts/${_id}`, {
+    fetch(`http://localhost:5000/update-parts/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

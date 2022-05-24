@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 import auth from "../../firebase.init";
-
 const MyOrder = () => {
   const [user] = useAuthState(auth);
   const [orders, setOrders] = useState([]);
@@ -16,6 +16,30 @@ const MyOrder = () => {
         });
     }
   }, [user]);
+  const handleDelete = (id) => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        const url = `http://localhost:5000/delete-purchase/${id}`;
+        fetch(url, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            const remaining = orders.filter((product) => product._id !== id);
+            setOrders(remaining);
+          });
+        Swal.fire("Deleted!", "Your file has been deleted.", "success");
+      }
+    });
+  };
   return (
     <div>
       <h2 className="text-2xl">Orders : {orders.length}</h2>
@@ -63,7 +87,11 @@ const MyOrder = () => {
                   )}
                 </td>
                 <td>
-                  <button class="btn btn-error text-white btn-xs">
+                  <button
+                    onClick={() => handleDelete(order._id)}
+                    disabled={order.paid === true}
+                    class="btn btn-error text-white btn-xs"
+                  >
                     Delete
                   </button>
                 </td>
