@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const useParts = () => {
   const [parts, setParts] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/get-parts`)
+    fetch(`https://fast-river-88547.herokuapp.com/get-parts`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

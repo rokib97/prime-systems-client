@@ -41,7 +41,7 @@ const PurchaseModa = ({ singleParts, refetch }) => {
     order = { ...order, totalPrice };
 
     // purchse order
-    fetch("http://localhost:5000/add-purchase", {
+    fetch("https://fast-river-88547.herokuapp.com/add-purchase", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -55,7 +55,7 @@ const PurchaseModa = ({ singleParts, refetch }) => {
 
     //update wuantity
     const updatedQuantity = availQuantity - quantity;
-    fetch(`http://localhost:5000/update-parts/${_id}`, {
+    fetch(`https://fast-river-88547.herokuapp.com/update-parts/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

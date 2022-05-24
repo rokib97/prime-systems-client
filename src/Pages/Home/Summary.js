@@ -19,7 +19,7 @@ const Summary = () => {
             <span className="text-3xl text-white font-bold">
               <CountUp delay={1} start={0} end={273} />+
             </span>
-            <p className="text-white">Cuntomers around the world</p>
+            <p className="text-white">Clients company around the world</p>
           </div>
         </div>
         <div class="card  bg-error shadow">
@@ -37,7 +37,7 @@ const Summary = () => {
             <span className="text-3xl text-white font-bold">
               <CountUp delay={1} start={0} end={500} />+
             </span>
-            <p className="text-white">Parts available in out stock</p>
+            <p className="text-white">Parts available varients in out stock</p>
           </div>
         </div>
         <div class="card  bg-warning shadow">

@@ -10,10 +10,11 @@ const Contact = () => {
           <div class="text-start lg:text-start">
             <h1 class="text-5xl font-bold">Let's chat.</h1>
             <p class="py-6 w-4/5">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-              totam vel ratione culpa similique quam mollitia alias eius eum.
-              Dolore quia voluptate architecto, quidem ab nesciunt dolorum
-              impedit eius! Ipsa?
+              We are always connected to our clients. it's makes us understand
+              the client requirements clearly , for that we can deliver the best
+              quality things to them, We beleive that listening to our clients
+              and make their requiremnets full is the untimate goal for us. Feel
+              free to contact us for more details..
             </p>
             <p>let's make the world better together! </p>
           </div>

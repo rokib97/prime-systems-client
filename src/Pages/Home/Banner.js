@@ -1,7 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import banner from "../../assets/images/banner.png";
-import PrimaryButton from "../../components/PrimaryButton";
 const Banner = () => {
+  const navigate = useNavigate();
   return (
     <div class="hero h-full lg:h-[80vh] bg-base-100">
       <div class="hero-content flex-col lg:flex-row">
@@ -13,7 +14,12 @@ const Banner = () => {
             quality and performance also we love to inevent new technology and
             share our work to the world.
           </p>
-          <PrimaryButton>Get Started</PrimaryButton>
+          <button
+            onClick={() => navigate("/availableparts")}
+            className="btn btn-primary text-uppercase text-white font-bold bg-gradient-to-r from-secondary to-primary"
+          >
+            Get Started
+          </button>
         </div>
         <img src={banner} class="lg:max-w-lg rounded-lg" alt="" />
       </div>

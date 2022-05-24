@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 const UserRow = ({ user, refetch, index }) => {
   const { email, role } = user;
   const makeAdmin = () => {
-    fetch(`http://localhost:5000/user/admin/${email}`, {
+    fetch(`https://fast-river-88547.herokuapp.com/user/admin/${email}`, {
       method: "PUT",
       headers: {
         "content-type": "application/jason",
@@ -15,7 +15,7 @@ const UserRow = ({ user, refetch, index }) => {
       })
       .then((data) => {
         refetch();
-        toast.success("Successfully Make abn Admin");
+        toast.success("Successfully Make an Admin");
       });
   };
   return (

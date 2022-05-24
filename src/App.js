@@ -5,6 +5,7 @@ import Login from "./authentication/Login";
 import PrivateAdmin from "./authentication/PrivateAdmin";
 import PrivateRoute from "./authentication/PrivateRoute";
 import Signup from "./authentication/Signup";
+import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import AvailableParts from "./Pages/AvailableParts/AvailableParts";
 import Blogs from "./Pages/Blogs/Blogs";
@@ -69,6 +70,7 @@ function App() {
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/portfolio" element={<MyPortfolio />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

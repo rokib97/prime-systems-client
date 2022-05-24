@@ -1,18 +1,20 @@
 import React from "react";
 import { useQuery } from "react-query";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Loading from "../../components/Loading";
 import PurchaseModa from "./PurchaseModa";
 
 const Purchase = () => {
   const { id } = useParams();
-
+  const navigate = useNavigate();
   const {
     data: singleParts,
     isLoading,
     refetch,
   } = useQuery("parts", () =>
-    fetch(`http://localhost:5000/get-parts/${id}`).then((res) => res.json())
+    fetch(`https://fast-river-88547.herokuapp.com/get-parts/${id}`).then(
+      (res) => res.json()
+    )
   );
   const { name, price, img, desc, minOrderQuantity, availQuantity } =
     singleParts || {};
@@ -35,10 +37,16 @@ const Purchase = () => {
           <div class="card-actions justify-end">
             <label
               htmlFor="purchase-modal"
-              className="btn btn-wide btn-secondary bg-gradient-to-r from-secondary to-primary text-white font-bold mt-2"
+              className="btn  btn-success text-white font-bold mt-2"
             >
               Purchase
             </label>
+            <button
+              onClick={() => navigate("/availableparts")}
+              className="btn  btn-error  text-white font-bold mt-2"
+            >
+              Purchase More
+            </button>
           </div>
 
           <PurchaseModa singleParts={singleParts} refetch={refetch} />

@@ -8,10 +8,11 @@ const MyOrder = () => {
   const [orders, setOrders] = useState([]);
   useEffect(() => {
     if (user) {
-      fetch(`http://localhost:5000/get-purchase?userEmail=${user.email}`)
+      fetch(
+        `https://fast-river-88547.herokuapp.com/get-purchase?userEmail=${user.email}`
+      )
         .then((res) => res.json())
         .then((data) => {
-          console.log(data);
           setOrders(data);
         });
     }
@@ -27,7 +28,7 @@ const MyOrder = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        const url = `http://localhost:5000/delete-purchase/${id}`;
+        const url = `https://fast-river-88547.herokuapp.com/delete-purchase/${id}`;
         fetch(url, {
           method: "DELETE",
         })
@@ -92,7 +93,7 @@ const MyOrder = () => {
                     disabled={order.paid === true}
                     class="btn btn-error text-white btn-xs"
                   >
-                    Delete
+                    Cancel
                   </button>
                 </td>
               </tr>

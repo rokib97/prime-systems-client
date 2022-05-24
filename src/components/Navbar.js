@@ -30,39 +30,40 @@ const Navbar = () => {
             tabindex="0"
             class="menu menu-compact dropdown-content mt-4 p-2 shadow bg-base-100 rounded-box w-52"
           >
-            <li>
+            <li className="mb-1">
               <NavLink to="/">Home</NavLink>
             </li>
-            <li>
+            <li className="mb-1">
               <NavLink to="/availableparts">Available Parts</NavLink>
             </li>
             {user && (
-              <li>
+              <li className="mb-1">
                 <NavLink to="/dashboard">Dashboard</NavLink>
               </li>
             )}
-            <li>
+            <li className="mb-1">
               <NavLink to="/blogs">Blogs</NavLink>
             </li>
 
-            <li>
+            <li className="mb-1">
               <NavLink to="/portfolio">Portfolio</NavLink>
             </li>
-            {user && (
-              <li>
-                <NavLink to="/portfolio">{user.displayName}</NavLink>
-              </li>
-            )}
+
             {user ? (
-              <li>
+              <li className="mb-1">
                 <NavLink onClick={() => signOut(auth)} to="/login">
                   LogOut
                 </NavLink>
               </li>
             ) : (
-              <li>
+              <li className="mb-1">
                 <NavLink to="/login">Login</NavLink>
               </li>
+            )}
+            {user && (
+              <button className="btn btn-ghost font-bold">
+                {user.displayName}
+              </button>
             )}
           </ul>
         </div>
@@ -112,38 +113,22 @@ const Navbar = () => {
           <li>
             <NavLink to="/portfolio">Portfolio</NavLink>
           </li>
-
-          <div class="dropdown dropdown-end">
-            <label tabindex="0" class="btn btn-ghost btn-circle avatar">
-              <div class="w-10 rounded-full">
-                <img
-                  src="https://api.lorem.space/image/face?hash=33791"
-                  alt=""
-                />
-              </div>
-            </label>
-            <ul
-              tabindex="0"
-              class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
-            >
-              {user && (
-                <li>
-                  <NavLink to="/portfolio">{user.displayName}</NavLink>
-                </li>
-              )}
-              {user ? (
-                <li>
-                  <NavLink onClick={() => signOut(auth)} to="/login">
-                    LogOut
-                  </NavLink>
-                </li>
-              ) : (
-                <li>
-                  <NavLink to="/login">Login</NavLink>
-                </li>
-              )}
-            </ul>
-          </div>
+          {user && (
+            <button className="btn btn-ghost hover:btn-primary font-bold">
+              {user.displayName}
+            </button>
+          )}
+          {user ? (
+            <li>
+              <NavLink onClick={() => signOut(auth)} to="/login">
+                LogOut
+              </NavLink>
+            </li>
+          ) : (
+            <li>
+              <NavLink to="/login">Login</NavLink>
+            </li>
+          )}
         </ul>
       </div>
     </div>

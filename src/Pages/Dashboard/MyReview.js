@@ -15,9 +15,11 @@ const MyReview = () => {
       ureview: e.target.review.value,
       img: imgURL,
     };
-    axios.post("http://localhost:5000/add-review", review).then((res) => {
-      toast.success("Review Added Successfully");
-    });
+    axios
+      .post("https://fast-river-88547.herokuapp.com/add-review", review)
+      .then((res) => {
+        toast.success("Review Added Successfully");
+      });
     e.target.reset();
   };
 
@@ -46,10 +48,10 @@ const MyReview = () => {
           <div class="text-start lg:text-start">
             <h1 class="text-5xl font-bold">Let's Review.</h1>
             <p class="py-6 w-4/5">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-              totam vel ratione culpa similique quam mollitia alias eius eum.
-              Dolore quia voluptate architecto, quidem ab nesciunt dolorum
-              impedit eius! Ipsa?
+              We are very responsibale to our clients, we listen them , we take
+              suggetions from and and improve our quality based on their
+              suggestions, Therefore a good review makes our product more
+              qualityful.
             </p>
             <p>let's make the world better together! </p>
           </div>
@@ -67,7 +69,7 @@ const MyReview = () => {
                   required
                   type="number"
                   name="ratings"
-                  placeholder="Your Ratings"
+                  placeholder="Your Ratings Out Of 5"
                   className="input input-bordered w-full max-w-md"
                 />
                 <input

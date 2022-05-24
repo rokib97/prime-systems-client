@@ -1,26 +1,26 @@
 [
   {
     "_id": 1,
-    "name": "Winson Herry",
-    "location": "California",
+    "name": "Henry Holand",
+    "location": "London",
     "ratings": "4",
-    "ureview": "It is a long established fact that by the readable content of a lot layout. The point of using Lorem a more-or-less normal distribu to using Content here, content",
+    "ureview": "They are simply best in class and quality. I'm very satisfied with them and this organization is world class",
     "img": "https://i.ibb.co/5MCNWGG/people1.png"
   },
   {
     "_id": 2,
-    "name": "Winson Herry",
-    "location": "California",
+    "name": "Ananta Khalil",
+    "location": "Dhaka",
     "ratings": "5",
-    "ureview": "It is a long established fact that by the readable content of a lot layout. The point of using Lorem a more-or-less normal distribu to using Content here, content",
+    "ureview": "I am very happy to work with them, they are very kind and their parts is world class, strongly recomended for all",
     "img": "https://i.ibb.co/2j2ZhHh/people2.png"
   },
   {
     "_id": 3,
-    "name": "Winson Herry",
+    "name": "Winson Donald",
     "location": "California",
     "ratings": "5",
-    "ureview": "It is a long established fact that by the readable content of a lot layout. The point of using Lorem a more-or-less normal distribu to using Content here, content",
+    "ureview": "When someone asked for recomended manufacturer i have always suggested Prime Systems. They build the best parts in the world",
     "img": "https://i.ibb.co/KsYFxck/people3.png"
   }
 ]

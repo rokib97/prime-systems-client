@@ -16,9 +16,11 @@ const AddProduct = () => {
       desc: e.target.description.value,
       img: imgURL,
     };
-    axios.post("http://localhost:5000/add-parts", singleParts).then((res) => {
-      toast.success("Product Added Successfully");
-    });
+    axios
+      .post("https://fast-river-88547.herokuapp.com/add-parts", singleParts)
+      .then((res) => {
+        toast.success("Product Added Successfully");
+      });
     e.target.reset();
   };
 

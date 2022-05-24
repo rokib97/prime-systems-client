@@ -8,17 +8,28 @@ import auth from "../../firebase.init";
 const MyProfile = () => {
   const [user] = useAuthState(auth);
   const { data: users, isLoading } = useQuery("available", () =>
-    fetch(`http://localhost:5000/user/${user.email}`).then((res) => res.json())
+    fetch(`https://fast-river-88547.herokuapp.com/user/${user.email}`).then(
+      (res) => res.json()
+    )
   );
 
   if (isLoading) {
     return <Loading />;
   }
-  const { _id } = users;
+  const {
+    _id,
+    email,
+    education,
+    location,
+    phone,
+    country,
+    linkedin,
+    yourself,
+  } = users;
   return (
     <div>
-      <h2 className="text-2xl mb-2">Welcome Your Profile</h2>
-      <div className="card mx-auto lg:max-w-lg bg-base-100 shadow-xl">
+      <h2 className="text-2xl mb-2">Welcome To Your Profile</h2>
+      <div className="card  mx-auto lg:max-w-3xl bg-base-100 shadow-xl">
         <div className="card-body">
           <div className="flex items-center mt-8">
             <div className="avatar">
@@ -35,7 +46,18 @@ const MyProfile = () => {
             </div>
             <div>
               <h2 className="card-title">Name: {user?.displayName}</h2>
-              <p>Email: {user.email}</p>
+              <p>Email: {email}</p>
+              <p>Education: {education}</p>
+              <p>Location: {location}</p>
+              <p>Phone: {phone}</p>
+              <p>Country: {country}</p>
+              <p>
+                LinkedIn Profile:{" "}
+                <a href={linkedin} class="link">
+                  {linkedin}
+                </a>
+              </p>
+              <p>About Yourself: {yourself}</p>
             </div>
           </div>
           <div class="card-actions justify-end">
