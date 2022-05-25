@@ -21,6 +21,7 @@ import Payment from "./Pages/Dashboard/Payment";
 import UpdateProfile from "./Pages/Dashboard/UpdateProfile";
 import Home from "./Pages/Home/Home";
 import MyPortfolio from "./Pages/MyPortfolio/MyPortfolio";
+import NotFound from "./Pages/NotFound/NotFound";
 import Purchase from "./Pages/Purchase/Purchase";
 
 function App() {
@@ -69,6 +70,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/portfolio" element={<MyPortfolio />} />
+        <Route path="/*" element={<NotFound />} />
       </Routes>
       <Footer />
     </div>

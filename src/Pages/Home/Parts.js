@@ -1,13 +1,15 @@
 import React from "react";
-// import { useQuery } from "react-query";
 import { Link } from "react-router-dom";
-// import Loading from "../../components/Loading";
+import Loading from "../../components/Loading";
 import PrimaryButton from "../../components/PrimaryButton";
 import useParts from "../../hooks/useParts";
 import Part from "./Part";
 
 const Parts = () => {
   const [parts] = useParts();
+  if (parts.length === 0) {
+    return <Loading />;
+  }
   return (
     <div className="my-8 lg:px-20">
       <h2 className="text-3xl font-bold text-center mb-16">Our Latest Parts</h2>
