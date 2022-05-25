@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   useCreateUserWithEmailAndPassword,
   useSignInWithGoogle,
@@ -26,6 +26,12 @@ const Signup = () => {
 
   const [token] = useToken(user || googleUser);
   let signInError;
+  useEffect(() => {
+    if (token) {
+      toast.success("Logged in Successfully");
+      navigate("/");
+    }
+  }, [token, navigate]);
   if (loading || googleLoading || updating) {
     return <Loading></Loading>;
   }
@@ -38,13 +44,10 @@ const Signup = () => {
       </p>
     );
   }
-  if (user || googleUser) {
-    navigate("/");
-  }
+
   const onSubmit = async (data) => {
     await createUserWithEmailAndPassword(data.email, data.password);
     await updateProfile({ displayName: data.name });
-    toast.success("Logged in Successfully");
   };
   return (
     <div className="h-full lg:h-[70vh] mt-20 flex justify-center items-center">

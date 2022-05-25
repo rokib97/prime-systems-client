@@ -1,22 +1,37 @@
+import { signOut } from "firebase/auth";
 import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import auth from "../../firebase.init";
 const MyOrder = () => {
+  const navigate = useNavigate();
   const [user] = useAuthState(auth);
   const [orders, setOrders] = useState([]);
   useEffect(() => {
     if (user) {
       fetch(
-        `https://fast-river-88547.herokuapp.com/get-purchase?userEmail=${user.email}`
+        `https://fast-river-88547.herokuapp.com/get-purchase?userEmail=${user.email}`,
+        {
+          method: "GET",
+          headers: {
+            authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+          },
+        }
       )
-        .then((res) => res.json())
+        .then((res) => {
+          if (res.status === 401 || res.ststus === 403) {
+            signOut(auth);
+            localStorage.removeItem("accessToken");
+            navigate("/");
+          }
+          return res.json();
+        })
         .then((data) => {
           setOrders(data);
         });
     }
-  }, [user]);
+  }, [user, navigate]);
   const handleDelete = (id) => {
     Swal.fire({
       title: "Are you sure?",

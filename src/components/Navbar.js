@@ -5,7 +5,11 @@ import { Link, NavLink } from "react-router-dom";
 import auth from "../firebase.init";
 const Navbar = () => {
   const [user] = useAuthState(auth);
-  // console.log(user);
+
+  const logOut = () => {
+    signOut(auth);
+    localStorage.removeItem("accessToken");
+  };
   return (
     <div class="navbar bg-base-100 sticky top-0 shadow-xl z-50 py-3 lg:px-12">
       <div class="navbar-start">
@@ -51,7 +55,7 @@ const Navbar = () => {
 
             {user ? (
               <li className="mb-1">
-                <NavLink onClick={() => signOut(auth)} to="/login">
+                <NavLink onClick={logOut} to="/login">
                   LogOut
                 </NavLink>
               </li>
@@ -120,7 +124,7 @@ const Navbar = () => {
           )}
           {user ? (
             <li>
-              <NavLink onClick={() => signOut(auth)} to="/login">
+              <NavLink onClick={logOut} to="/login">
                 LogOut
               </NavLink>
             </li>

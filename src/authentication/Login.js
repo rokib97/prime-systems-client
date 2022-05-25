@@ -9,6 +9,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import Loading from "../components/Loading";
 import auth from "../firebase.init";
+import useToken from "../hooks/useToken";
 const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -24,17 +25,18 @@ const Login = () => {
     handleSubmit,
     getValues,
   } = useForm();
+  const [token] = useToken(user || googleUser);
   const onSubmit = (data) => {
     console.log(data.email);
     signInWithEmailAndPassword(data.email, data.password);
   };
   let signInError;
   useEffect(() => {
-    if (user || googleUser) {
+    if (token) {
       toast.success("Logged in Successfully");
       navigate(from, { replace: true });
     }
-  }, [from, navigate, user, googleUser]);
+  }, [from, navigate, token]);
   if (loading || googleLoading || sending) {
     return <Loading></Loading>;
   }
