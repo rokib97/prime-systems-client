@@ -8,9 +8,13 @@ import auth from "../../firebase.init";
 const MyProfile = () => {
   const [user] = useAuthState(auth);
   const { data: users, isLoading } = useQuery("available", () =>
-    fetch(`https://fast-river-88547.herokuapp.com/user/${user.email}`).then(
-      (res) => res.json()
-    )
+    fetch(`http://localhost:5000/user/${user.email}`, {
+      method: "GET",
+      headers: {
+        "content-type": "application/jason",
+        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+      },
+    }).then((res) => res.json())
   );
 
   if (isLoading) {

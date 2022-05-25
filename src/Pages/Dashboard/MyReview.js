@@ -15,11 +15,9 @@ const MyReview = () => {
       ureview: e.target.review.value,
       img: imgURL,
     };
-    axios
-      .post("https://fast-river-88547.herokuapp.com/add-review", review)
-      .then((res) => {
-        toast.success("Review Added Successfully");
-      });
+    axios.post("http://localhost:5000/add-review", review).then((res) => {
+      toast.success("Review Added Successfully");
+    });
     e.target.reset();
   };
 

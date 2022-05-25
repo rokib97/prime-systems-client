@@ -11,10 +11,11 @@ const CheckoutForm = ({ purchase }) => {
   const [clientSecret, setClientSecret] = useState("");
   const { _id, totalPrice, userName, userEmail } = purchase;
   useEffect(() => {
-    fetch("https://fast-river-88547.herokuapp.com/create-payment-intent", {
+    fetch("http://localhost:5000/create-payment-intent", {
       method: "POST",
       headers: {
         "content-type": "application/json",
+        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
       },
       body: JSON.stringify({ totalPrice }),
     })
@@ -71,10 +72,11 @@ const CheckoutForm = ({ purchase }) => {
         orderId: _id,
         transactionId: paymentIntent.id,
       };
-      fetch(`https://fast-river-88547.herokuapp.com/update-purchase/${_id}`, {
+      fetch(`http://localhost:5000/update-purchase/${_id}`, {
         method: "PATCH",
         headers: {
           "content-type": "application/json",
+          authorization: `Bearer ${localStorage.getItem("accessToken")}`,
         },
         body: JSON.stringify(payment),
       })
