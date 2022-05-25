@@ -29,7 +29,7 @@ const MyProfile = () => {
   return (
     <div>
       <h2 className="text-2xl mb-2">Welcome To Your Profile</h2>
-      <div className="card  mx-auto lg:max-w-3xl bg-base-100 shadow-xl">
+      <div className="card  mx-auto lg:max-w-3xl bg-base-100 shadow-xl mt-12">
         <div className="card-body">
           <div className="flex items-center mt-8">
             <div className="avatar">

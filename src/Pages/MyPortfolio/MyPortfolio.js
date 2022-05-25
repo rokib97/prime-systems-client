@@ -76,7 +76,6 @@ const MyPortfolio = () => {
         <h2 className="text-3xl font-bold text-center mb-16">
           Latest Projects
         </h2>
-
         <div class="card lg:card-side bg-base-100 shadow-xl mb-12">
           <div class="card-body">
             <h1 className="text-3xl font-bold text-primary">
