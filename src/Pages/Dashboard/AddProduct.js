@@ -90,8 +90,15 @@ const AddProduct = () => {
                   placeholder="Your Image"
                   className="w-full max-w-xs"
                 />
+                {!imgURL ? (
+                  <p className="text-red-500">
+                    Uploading an image can take some time.Please wait...
+                  </p>
+                ) : (
+                  ""
+                )}
                 <button
-                  disabled={!imgURL ? true : false}
+                  disabled={!imgURL}
                   className="btn btn-primary text-uppercase text-white font-bold bg-gradient-to-r from-secondary to-primary"
                 >
                   Add

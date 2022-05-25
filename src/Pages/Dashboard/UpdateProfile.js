@@ -75,7 +75,7 @@ const UpdateProfile = () => {
                   rows={4}
                 ></textarea>
                 <button className="btn btn-primary text-uppercase text-white font-bold bg-gradient-to-r from-secondary to-primary">
-                  Update
+                  Update Profile
                 </button>
               </div>
             </form>
