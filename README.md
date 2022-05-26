@@ -31,3 +31,11 @@ Live Link : [Prime Systems](https://hi-tech-f766c.web.app/).
 - Axios
 - Sweetalert2
 - Npm etc
+
+## Back End Technologies And Tools
+
+- Node Js
+- Express JS
+- MongoDB
+- JWT
+- Stripe JS
