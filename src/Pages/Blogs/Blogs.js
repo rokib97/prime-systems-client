@@ -4,7 +4,7 @@ const Blogs = () => {
   return (
     <div className="mt-20 lg:px-20">
       <div
-        tabindex="0"
+        tabIndex="0"
         className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box"
       >
         <div className="collapse-title text-xl font-medium">
@@ -29,7 +29,7 @@ const Blogs = () => {
         </div>
       </div>
       <div
-        tabindex="0"
+        tabIndex="0"
         className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box mt-4"
       >
         <div className="collapse-title text-xl font-medium">
@@ -57,7 +57,7 @@ const Blogs = () => {
         </div>
       </div>
       <div
-        tabindex="0"
+        tabIndex="0"
         className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box mt-4"
       >
         <div className="collapse-title text-xl font-medium">
@@ -80,7 +80,7 @@ const Blogs = () => {
         </div>
       </div>
       <div
-        tabindex="0"
+        tabIndex="0"
         className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box mt-4"
       >
         <div className="collapse-title text-xl font-medium">
@@ -106,7 +106,7 @@ const Blogs = () => {
         </div>
       </div>
       <div
-        tabindex="0"
+        tabIndex="0"
         className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box mt-4"
       >
         <div className="collapse-title text-xl font-medium">

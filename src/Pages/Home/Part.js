@@ -6,7 +6,7 @@ const Part = ({ part }) => {
   const { _id, name, img, desc, price, minOrderQuantity, availQuantity } =
     part || {};
   return (
-    <div className="card max-w-:lg mx-auto px-0 bg-base-100 shadow-xl">
+    <div className="card w-full max-w-:lg mx-auto px-0 bg-base-100 shadow-xl">
       <figure>
         <img className="w-full h-80" src={img} alt="Shoes" />
       </figure>
