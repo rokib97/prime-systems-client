@@ -17,21 +17,6 @@ Live Link : [Prime Systems](https://hi-tech-f766c.web.app/).
 
 ## A list of technologies (frameworks, libraries) used in My project
 
-## Front End Technologies And Tools
-
-- React
-- React Router
-- Firebase
-- React firebase hook
-- DaisyUI
-- React-Toastify
-- React-hook-form
-- React-icons
-- React Query
-- Axios
-- Sweetalert2
-- Npm etc
-
 ## Back End Technologies And Tools
 
 - Node Js
