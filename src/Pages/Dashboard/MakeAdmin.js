@@ -13,7 +13,6 @@ const MakeAdmin = () => {
       method: "GET",
       headers: {
         "content-type": "application/jason",
-        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
       },
     }).then((res) => res.json())
   );
@@ -36,7 +35,7 @@ const MakeAdmin = () => {
           <tbody>
             {users?.map((user, index) => (
               <UserRow
-                key={user._id}
+                key={index}
                 user={user}
                 index={index}
                 refetch={refetch}

@@ -1,6 +1,5 @@
 [
   {
-    "_id": 1,
     "name": "DEEPCOOL MATREXX 55 Gaming Case",
     "price": "4000",
     "minOrderQuantity": "50",
@@ -9,7 +8,6 @@
     "img": "https://i.ibb.co/kXf5bdJ/two.png"
   },
   {
-    "_id": 2,
     "name": "A320M-HDV R4.0  Motherboard",
     "price": "5000",
     "minOrderQuantity": "100",
@@ -18,7 +16,6 @@
     "img": "https://i.ibb.co/5vvNX0F/three.png"
   },
   {
-    "_id": 3,
     "name": "i3-12100 12th Gen Alder Lake Processor",
     "price": "8000",
     "minOrderQuantity": "100",
@@ -27,7 +24,6 @@
     "img": "https://i.ibb.co/P5vhWps/six.png"
   },
   {
-    "_id": 4,
     "name": "Z1 ARGB 120mm Casing Fan",
     "price": "1000",
     "minOrderQuantity": "50",
@@ -36,7 +32,6 @@
     "img": "https://i.ibb.co/0hyFB8x/one.png"
   },
   {
-    "_id": 5,
     "name": "SPARK AIO Lite ARGB 240mn CPU Liquid Cooler",
     "price": "2000",
     "minOrderQuantity": "100",
@@ -45,7 +40,6 @@
     "img": "https://i.ibb.co/km0tqz0/seven.png"
   },
   {
-    "_id": 6,
     "name": "1TB 3.5 Surveillance Hard Drive",
     "price": "3500",
     "minOrderQuantity": "20",
@@ -54,7 +48,6 @@
     "img": "https://i.ibb.co/R6SwJ8k/four.png"
   },
   {
-    "_id": 7,
     "name": "FURY Beast 16GB 5200MHz DDR5 Desktop RAM",
     "price": "1500",
     "minOrderQuantity": "50",
@@ -63,7 +56,6 @@
     "img": "https://i.ibb.co/WKhVjWr/five.png"
   },
   {
-    "_id": 8,
     "name": "GeForce RTX 3070 Ti MASTER 8GB GDDR6X Graphics Card",
     "price": "5500",
     "minOrderQuantity": "50",
