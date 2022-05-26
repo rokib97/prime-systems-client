@@ -17,7 +17,7 @@ const Summary = () => {
           <div className="card-body items-center text-center">
             <FaUsers size={50} color="white" />
             <span className="text-3xl text-white font-bold">
-              <CountUp delay={1} start={0} end={273} />+
+              <CountUp delay={3} start={0} end={273} />+
             </span>
             <p className="text-white">Clients company around the world</p>
           </div>
@@ -26,7 +26,7 @@ const Summary = () => {
           <div className="card-body items-center text-center">
             <FaUserCheck size={50} color="blue" />
             <span className="text-3xl text-white font-bold">
-              <CountUp delay={1} start={0} end={400} />+
+              <CountUp delay={3} start={0} end={400} />+
             </span>
             <p className="text-white">we take customers feedback seriously</p>
           </div>
@@ -35,7 +35,7 @@ const Summary = () => {
           <div className="card-body items-center text-center">
             <FaDesktop size={50} color="white" />
             <span className="text-3xl text-white font-bold">
-              <CountUp delay={1} start={0} end={500} />+
+              <CountUp delay={3} start={0} end={500} />+
             </span>
             <p className="text-white">Parts available varients in out stock</p>
           </div>
@@ -44,7 +44,7 @@ const Summary = () => {
           <div className="card-body items-center text-center">
             <FaFontAwesomeFlag size={50} color="blue" />
             <span className="text-3xl text-white font-bold">
-              <CountUp delay={1} start={0} end={70} />+
+              <CountUp delay={3} start={0} end={70} />+
             </span>
             <p className="text-white">
               we provide internatioin facilities too for our customers
