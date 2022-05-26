@@ -4,7 +4,7 @@ import myself from "../../assets/images/person-0.png";
 const MyPortfolio = () => {
   return (
     <>
-      <section className="hero h-full bg-base-100">
+      <section className="hero bg-base-100">
         <div className="hero-content flex-col lg:flex-row">
           <div>
             <p className="text-xl">HEY! THERE</p>
