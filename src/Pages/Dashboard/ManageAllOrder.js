@@ -86,10 +86,14 @@ const ManageAllOrder = () => {
                 <td>${order.totalPrice}</td>
                 <td>
                   {order?.price && !order?.paid && (
-                    <span className="text-info">Unpaid</span>
+                    <span className="text-white btn-info btn btn-xs">
+                      Unpaid
+                    </span>
                   )}
                   {order?.price && order?.paid && (
-                    <span className="text-info">Paid</span>
+                    <span className="text-white btn-success btn btn-xs">
+                      Paid
+                    </span>
                   )}
                 </td>
                 <td>
@@ -98,7 +102,7 @@ const ManageAllOrder = () => {
                       <button
                         disabled={order?.shipping === true}
                         onClick={() => handlePending(order._id)}
-                        class="btn btn-success text-white btn-xs"
+                        class="btn btn-warning text-white btn-xs"
                       >
                         {order?.shipping ? "Shipped" : "Pending"}
                       </button>
