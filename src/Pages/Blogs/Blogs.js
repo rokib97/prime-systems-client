@@ -5,12 +5,12 @@ const Blogs = () => {
     <div className="mt-20 lg:px-20">
       <div
         tabindex="0"
-        class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box"
+        className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box"
       >
-        <div class="collapse-title text-xl font-medium">
+        <div className="collapse-title text-xl font-medium">
           How will you improve the performance of a React Application?
         </div>
-        <div class="collapse-content">
+        <div className="collapse-content">
           <p>
             Improving the performance is the key to developers who are mindful
             of keeping the user experinences positive and good.In react
@@ -30,12 +30,12 @@ const Blogs = () => {
       </div>
       <div
         tabindex="0"
-        class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box mt-4"
+        className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box mt-4"
       >
-        <div class="collapse-title text-xl font-medium">
+        <div className="collapse-title text-xl font-medium">
           What are the different ways to manage a state in a React application?
         </div>
-        <div class="collapse-content">
+        <div className="collapse-content">
           <p>
             In Modern React application we use functional components. Components
             are just JavaScript functions that are reusable bits of code. The
@@ -58,12 +58,12 @@ const Blogs = () => {
       </div>
       <div
         tabindex="0"
-        class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box mt-4"
+        className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box mt-4"
       >
-        <div class="collapse-title text-xl font-medium">
+        <div className="collapse-title text-xl font-medium">
           Why should we not update the state directly?
         </div>
-        <div class="collapse-content">
+        <div className="collapse-content">
           <p>
             In React we know when we changed or update something.it always
             renders all the components that are in its tree,React maintain a
@@ -81,12 +81,12 @@ const Blogs = () => {
       </div>
       <div
         tabindex="0"
-        class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box mt-4"
+        className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box mt-4"
       >
-        <div class="collapse-title text-xl font-medium">
+        <div className="collapse-title text-xl font-medium">
           How does prototypical inheritance work?
         </div>
-        <div class="collapse-content">
+        <div className="collapse-content">
           <p>
             JavaScript is a prototype-based, Object Oriented Programming
             Language. After ES6 JavaScript allow the prototypical inheritance
@@ -107,12 +107,12 @@ const Blogs = () => {
       </div>
       <div
         tabindex="0"
-        class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box mt-4"
+        className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box mt-4"
       >
-        <div class="collapse-title text-xl font-medium">
+        <div className="collapse-title text-xl font-medium">
           What is a unit test? Why should write unit tests?
         </div>
-        <div class="collapse-content">
+        <div className="collapse-content">
           <p>
             Unit test is a type of software testing where individual units or
             software components are tested for their optimization and

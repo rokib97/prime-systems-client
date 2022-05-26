@@ -5,14 +5,14 @@ const Contact = () => {
   return (
     <div className="mt-16">
       <h2 className="text-3xl font-bold text-center mb-8">Contact Us</h2>
-      <div class="hero h-full bg-base-100">
-        <div class="hero-content flex-col lg:flex-row">
-          <div class="text-start lg:text-start">
+      <div className="hero h-full bg-base-100">
+        <div className="hero-content flex-col lg:flex-row">
+          <div className="text-start lg:text-start">
             <h1
               data-aos="fade-right"
               data-aos-duration="1000"
               data-aos-delay="200"
-              class="text-5xl font-bold"
+              className="text-5xl font-bold"
             >
               Let's chat.
             </h1>
@@ -20,7 +20,7 @@ const Contact = () => {
               data-aos="fade-right"
               data-aos-duration="900"
               data-aos-delay="400"
-              class="py-6 w-4/5"
+              className="py-6 w-4/5"
             >
               We are always connected to our clients. it's makes us understand
               the client requirements clearly , for that we can deliver the best

@@ -59,8 +59,8 @@ const MyOrder = () => {
   return (
     <div>
       <h2 className="text-2xl">Your Orders : {orders.length}</h2>
-      <div class="overflow-x-auto">
-        <table class="table  table-compact w-full">
+      <div className="overflow-x-auto">
+        <table className="table  table-compact w-full">
           <thead>
             <tr>
               <th></th>
@@ -85,7 +85,7 @@ const MyOrder = () => {
                 <td>
                   {order?.price && !order?.paid && (
                     <Link to={`/dashboard/payment/${order._id}`}>
-                      <button class="btn btn-success text-white btn-xs">
+                      <button className="btn btn-success text-white btn-xs">
                         Pay
                       </button>
                     </Link>
@@ -122,7 +122,7 @@ const MyOrder = () => {
                   <button
                     onClick={() => handleDelete(order._id)}
                     disabled={order.paid === true}
-                    class="btn btn-error text-white btn-xs"
+                    className="btn btn-error text-white btn-xs"
                   >
                     Cancel
                   </button>

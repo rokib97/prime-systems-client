@@ -40,11 +40,11 @@ const MyReview = () => {
   return (
     <div>
       <h2 className="text-2xl">Add Your Review Here</h2>
-      <div class="hero h-full bg-base-100">
-        <div class="hero-content flex-col lg:flex-row">
-          <div class="text-start lg:text-start">
-            <h1 class="text-5xl font-bold">Let's Review.</h1>
-            <p class="py-6 w-4/5">
+      <div className="hero h-full bg-base-100">
+        <div className="hero-content flex-col lg:flex-row">
+          <div className="text-start lg:text-start">
+            <h1 className="text-5xl font-bold">Let's Review.</h1>
+            <p className="py-6 w-4/5">
               We are very responsibale to our clients, we listen them , we take
               suggetions from and and improve our quality based on their
               suggestions, Therefore a good review makes our product more

@@ -62,8 +62,8 @@ const ManageAllOrder = () => {
   return (
     <div>
       <h2 className="text-2xl">Manage All Order</h2>
-      <div class="overflow-x-auto">
-        <table class="table  table-compact w-full">
+      <div className="overflow-x-auto">
+        <table className="table  table-compact w-full">
           <thead>
             <tr>
               <th></th>
@@ -102,7 +102,7 @@ const ManageAllOrder = () => {
                       <button
                         disabled={order?.shipping === true}
                         onClick={() => handlePending(order._id)}
-                        class="btn btn-warning text-white btn-xs"
+                        className="btn btn-warning text-white btn-xs"
                       >
                         {order?.shipping ? "Shipped" : "Pending"}
                       </button>
@@ -113,7 +113,7 @@ const ManageAllOrder = () => {
                   <button
                     onClick={() => handleDelete(order._id)}
                     disabled={order.paid === true}
-                    class="btn btn-error text-white btn-xs"
+                    className="btn btn-error text-white btn-xs"
                   >
                     Cancel
                   </button>

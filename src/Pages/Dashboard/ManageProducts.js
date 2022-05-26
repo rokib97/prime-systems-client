@@ -37,8 +37,8 @@ const ManageProducts = () => {
   return (
     <div>
       <h2 className="text-2xl">All Products: {parts.length}</h2>
-      <div class="overflow-x-auto">
-        <table class="table  table-compact w-full">
+      <div className="overflow-x-auto">
+        <table className="table  table-compact w-full">
           <thead>
             <tr>
               <th></th>
@@ -62,7 +62,7 @@ const ManageProducts = () => {
                 <td>
                   <button
                     onClick={() => handleDelete(part._id)}
-                    class="btn btn-error text-white btn-xs"
+                    className="btn btn-error text-white btn-xs"
                   >
                     Delete
                   </button>

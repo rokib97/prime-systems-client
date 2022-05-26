@@ -1,6 +1,6 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -27,12 +27,13 @@ import MyPortfolio from "./Pages/MyPortfolio/MyPortfolio";
 import NotFound from "./Pages/NotFound/NotFound";
 import Purchase from "./Pages/Purchase/Purchase";
 function App() {
+  const [dark, setDark] = useState(false);
   useEffect(() => {
     AOS.init();
   }, []);
   return (
-    <div>
-      <Navbar />
+    <div data-theme={dark ? "dark" : "light"}>
+      <Navbar setDark={setDark} dark={dark} />
       <ToastContainer />
 
       <Routes>

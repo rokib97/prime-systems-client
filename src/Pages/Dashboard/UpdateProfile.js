@@ -31,8 +31,8 @@ const UpdateProfile = () => {
   return (
     <div>
       <h2 className="text-2xl">Update Your Profile Here</h2>
-      <div class="h-full w-full bg-base-100">
-        <div class="hero-content flex-col lg:flex-row">
+      <div className="h-full w-full bg-base-100">
+        <div className="hero-content flex-col lg:flex-row">
           <div className="card flex-shrink-0 w-full max-w-sm lg:max-w-lg shadow-2xl bg-base-100">
             <form onSubmit={handleSubmit}>
               <div className="card-body">

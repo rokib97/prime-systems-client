@@ -4,11 +4,11 @@ import myself from "../../assets/images/person-0.png";
 const MyPortfolio = () => {
   return (
     <>
-      <section class="hero h-full bg-base-100">
-        <div class="hero-content flex-col lg:flex-row">
+      <section className="hero h-full bg-base-100">
+        <div className="hero-content flex-col lg:flex-row">
           <div>
             <p className="text-xl">HEY! THERE</p>
-            <h1 class="text-5xl font-bold">I'M ROKIBUL HASN ROKIB</h1>
+            <h1 className="text-5xl font-bold">I'M ROKIBUL HASN ROKIB</h1>
             <p className="text-xl font-bold mb-2">FRONT END DEVELOPER</p>
             <div className="flex mb-3">
               <FaMailBulk size={25} />
@@ -22,62 +22,62 @@ const MyPortfolio = () => {
             </div>
             <p className="my-2">I am good at -</p>
             <div className="mb-1 ">
-              <button class="btn btn-xs mr-2 btn-primary text-white">
+              <button className="btn btn-xs mr-2 btn-primary text-white">
                 HTML5
               </button>
-              <button class="btn btn-xs mr-2 btn-secondary text-white">
+              <button className="btn btn-xs mr-2 btn-secondary text-white">
                 CSS3
               </button>
-              <button class="btn btn-xs mr-2 btn-info text-white">
+              <button className="btn btn-xs mr-2 btn-info text-white">
                 Bootstrap5
               </button>
-              <button class="btn btn-xs mr-2 btn-accent text-white">
+              <button className="btn btn-xs mr-2 btn-accent text-white">
                 JavaScript
               </button>
-              <button class="btn btn-xs mr-2 btn-success text-white">
+              <button className="btn btn-xs mr-2 btn-success text-white">
                 ES6
               </button>
-              <button class="btn btn-xs mr-2 btn-warning text-white">
+              <button className="btn btn-xs mr-2 btn-warning text-white">
                 DOM
               </button>
-              <button class="btn btn-xs mr-2 btn-error text-white">
+              <button className="btn btn-xs mr-2 btn-error text-white">
                 REST API
               </button>
             </div>
             <div>
-              <button class="btn btn-xs mr-2 btn-error text-white">
+              <button className="btn btn-xs mr-2 btn-error text-white">
                 React
               </button>
-              <button class="btn btn-xs mr-2 btn-warning text-white">
+              <button className="btn btn-xs mr-2 btn-warning text-white">
                 React Router
               </button>
-              <button class="btn btn-xs mr-2 btn-success text-white">
+              <button className="btn btn-xs mr-2 btn-success text-white">
                 React Hook
               </button>
-              <button class="btn btn-xs mr-2 btn-accent text-white">
+              <button className="btn btn-xs mr-2 btn-accent text-white">
                 Node JS
               </button>
-              <button class="btn btn-xs mr-2 btn-info text-white">
+              <button className="btn btn-xs mr-2 btn-info text-white">
                 Express JS
               </button>
-              <button class="btn btn-xs mr-2 btn-secondary text-white">
+              <button className="btn btn-xs mr-2 btn-secondary text-white">
                 Firebase
               </button>
               <br />
-              <button class="btn btn-xs mr-2 btn-primary mt-1 text-white">
+              <button className="btn btn-xs mr-2 btn-primary mt-1 text-white">
                 MongoDB
               </button>
             </div>
           </div>
-          <img src={myself} class="lg:max-w-lg rounded-lg w-96" alt="" />
+          <img src={myself} className="lg:max-w-lg rounded-lg w-96" alt="" />
         </div>
       </section>
       <section className="mt-16 lg:px-20">
         <h2 className="text-3xl font-bold text-center mb-16">
           Latest Projects
         </h2>
-        <div class="card lg:card-side bg-base-100 shadow-xl mb-12">
-          <div class="card-body">
+        <div className="card lg:card-side bg-base-100 shadow-xl mb-12">
+          <div className="card-body">
             <h1 className="text-3xl font-bold text-primary">
               Infinity Electronics
             </h1>
@@ -96,7 +96,7 @@ const MyPortfolio = () => {
             <p>
               <a
                 href="https://github.com/rokib97/infinity-electronics-gadget-client"
-                class="link font-bold no-underline text-info
+                className="link font-bold no-underline text-info
                 "
               >
                 Github Client
@@ -105,16 +105,16 @@ const MyPortfolio = () => {
             <p>
               <a
                 href="https://github.com/rokib97/infinity-electronics-gadget-server"
-                class="link font-bold no-underline text-error
+                className="link font-bold no-underline text-error
                 "
               >
                 Github Server
               </a>
             </p>
-            <div class="card-actions justify-end">
+            <div className="card-actions justify-end">
               <a
                 href="https://infinity-electronics-gadget.web.app/"
-                class=" link font-bold no-underline btn btn-primary bg-gradient-to-r from-secondary to-primary text-white mt-2
+                className=" link font-bold no-underline btn btn-primary bg-gradient-to-r from-secondary to-primary text-white mt-2
                 "
               >
                 Live Site
@@ -122,8 +122,8 @@ const MyPortfolio = () => {
             </div>
           </div>
         </div>
-        <div class="card lg:card-side bg-base-100 shadow-xl mb-12">
-          <div class="card-body">
+        <div className="card lg:card-side bg-base-100 shadow-xl mb-12">
+          <div className="card-body">
             <h1 className="text-3xl font-bold text-primary">Health Coach</h1>
             <p>
               1. Individual Service Provider website where users can book any
@@ -138,16 +138,16 @@ const MyPortfolio = () => {
             <p>
               <a
                 href="https://github.com/rokib97/health-coach"
-                class="link font-bold no-underline text-info
+                className="link font-bold no-underline text-info
                 "
               >
                 Github Code
               </a>
             </p>
-            <div class="card-actions justify-end">
+            <div className="card-actions justify-end">
               <a
                 href="https://health-coach-4ffb0.web.app/"
-                class="link font-bold no-underline btn btn-primary bg-gradient-to-r from-secondary to-primary text-white mt-2
+                className="link font-bold no-underline btn btn-primary bg-gradient-to-r from-secondary to-primary text-white mt-2
                 "
               >
                 Live Site
@@ -155,8 +155,8 @@ const MyPortfolio = () => {
             </div>
           </div>
         </div>
-        <div class="card lg:card-side bg-base-100 shadow-xl">
-          <div class="card-body">
+        <div className="card lg:card-side bg-base-100 shadow-xl">
+          <div className="card-body">
             <h1 className="text-3xl font-bold text-primary">Money Assistant</h1>
             <p>
               1. Money Assistant is a Expense Tracker website where anyone can
@@ -169,16 +169,16 @@ const MyPortfolio = () => {
             <p>
               <a
                 href="https://github.com/rokib97/money-assistant"
-                class="link font-bold no-underline text-info
+                className="link font-bold no-underline text-info
                 "
               >
                 Github Code
               </a>
             </p>
-            <div class="card-actions justify-end">
+            <div className="card-actions justify-end">
               <a
                 href="https://relaxed-beaver-37d55b.netlify.app/"
-                class="link font-bold no-underline btn btn-primary bg-gradient-to-r from-secondary to-primary text-white mt-2"
+                className="link font-bold no-underline btn btn-primary bg-gradient-to-r from-secondary to-primary text-white mt-2"
               >
                 Live Site
               </a>

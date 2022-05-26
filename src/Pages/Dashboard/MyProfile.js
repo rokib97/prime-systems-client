@@ -57,16 +57,16 @@ const MyProfile = () => {
               <p>Country: {country}</p>
               <p>
                 LinkedIn Profile:{" "}
-                <a href={linkedin} class="link">
+                <a href={linkedin} className="link">
                   {linkedin}
                 </a>
               </p>
               <p>About Yourself: {yourself}</p>
             </div>
           </div>
-          <div class="card-actions justify-end">
+          <div className="card-actions justify-end">
             <Link to={`updateprofile/${_id}`}>
-              <button class="btn btn-primary text-uppercase text-white font-bold bg-gradient-to-r from-secondary to-primary">
+              <button className="btn btn-primary text-uppercase text-white font-bold bg-gradient-to-r from-secondary to-primary">
                 Update Profile
               </button>
             </Link>

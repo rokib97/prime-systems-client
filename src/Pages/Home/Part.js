@@ -6,17 +6,17 @@ const Part = ({ part }) => {
   const { _id, name, img, desc, price, minOrderQuantity, availQuantity } =
     part || {};
   return (
-    <div class="card max-w-:lg mx-auto px-0 bg-base-100 shadow-xl">
+    <div className="card max-w-:lg mx-auto px-0 bg-base-100 shadow-xl">
       <figure>
         <img className="w-full h-80" src={img} alt="Shoes" />
       </figure>
-      <div class="card-body">
-        <h2 class="card-title">Name: {name}</h2>
+      <div className="card-body">
+        <h2 className="card-title">Name: {name}</h2>
         <p>Description: {desc.slice(0, 50)}</p>
         <p>Price: ${price}</p>
         <p>Min Order Quantity: {minOrderQuantity}</p>
         <p>Available Quantity: {availQuantity}</p>
-        <div class="card-actions justify-start">
+        <div className="card-actions justify-start">
           <Link to={`/purchase/${_id}`}>
             <PrimaryButton>purchase</PrimaryButton>
           </Link>

@@ -4,14 +4,14 @@ import banner from "../../assets/images/banner.png";
 const Banner = () => {
   const navigate = useNavigate();
   return (
-    <div class="hero h-full lg:h-[80vh] bg-base-100">
-      <div class="hero-content flex-col lg:flex-row">
+    <div className="hero h-full lg:h-[80vh] bg-base-100">
+      <div className="hero-content flex-col lg:flex-row">
         <div>
           <h1
             data-aos="fade-right"
             data-aos-duration="1000"
             data-aos-delay="200"
-            class="text-5xl font-bold"
+            className="text-5xl font-bold"
           >
             Delivering a Better Tomorrow!
           </h1>
@@ -19,7 +19,7 @@ const Banner = () => {
             data-aos="fade-right"
             data-aos-duration="900"
             data-aos-delay="400"
-            class="py-4 lg:max-w-2xl"
+            className="py-4 lg:max-w-2xl"
           >
             Prime Systems is a manufacturer organization where we provide the
             best computer parts around the whole world. we beleive and focus on
@@ -35,7 +35,7 @@ const Banner = () => {
             Get Started
           </button>
         </div>
-        <img src={banner} class="lg:max-w-lg rounded-lg" alt="" />
+        <img src={banner} className="lg:max-w-lg rounded-lg" alt="" />
       </div>
     </div>
   );

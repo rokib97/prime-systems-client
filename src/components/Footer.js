@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   const yearNow = new Date().getFullYear();
   return (
-    <footer class=" p-10 mt-20 bg-base-100 shadow-2xl">
+    <footer className=" p-10 mt-20 bg-base-100 shadow-2xl">
       <div className="footer">
         <div className="lg:ml-32">
           <span className="footer-title">Services</span>
