@@ -8,7 +8,7 @@ import auth from "../../firebase.init";
 const MyProfile = () => {
   const [user] = useAuthState(auth);
   const { data: users, isLoading } = useQuery("available", () =>
-    fetch(`http://localhost:5000/user/${user.email}`, {
+    fetch(`https://fast-river-88547.herokuapp.com/user/${user.email}`, {
       method: "GET",
       headers: {
         "content-type": "application/jason",

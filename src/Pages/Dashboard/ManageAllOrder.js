@@ -9,7 +9,7 @@ const ManageAllOrder = () => {
     isLoading,
     refetch,
   } = useQuery("orders", () =>
-    fetch("http://localhost:5000/get-allpurchase", {
+    fetch("https://fast-river-88547.herokuapp.com/get-allpurchase", {
       method: "GET",
       headers: {
         "content-type": "application/jason",
@@ -30,7 +30,7 @@ const ManageAllOrder = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        const url = `http://localhost:5000/delete-purchase/${id}`;
+        const url = `https://fast-river-88547.herokuapp.com/delete-purchase/${id}`;
         fetch(url, {
           method: "DELETE",
         })
@@ -43,13 +43,16 @@ const ManageAllOrder = () => {
     });
   };
   const handlePending = (id) => {
-    fetch(`http://localhost:5000/update-purchase-status/${id}`, {
-      method: "PATCH",
-      headers: {
-        "content-type": "application/json",
-        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-      },
-    })
+    fetch(
+      `https://fast-river-88547.herokuapp.com/update-purchase-status/${id}`,
+      {
+        method: "PATCH",
+        headers: {
+          "content-type": "application/json",
+          authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+        },
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         refetch();

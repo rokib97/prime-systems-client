@@ -27,7 +27,6 @@ const Login = () => {
   } = useForm();
   const [token] = useToken(user || googleUser);
   const onSubmit = (data) => {
-    console.log(data.email);
     signInWithEmailAndPassword(data.email, data.password);
   };
   let signInError;

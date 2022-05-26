@@ -20,10 +20,12 @@ const UpdateProfile = () => {
       linkedin: e.target.linkedin.value,
       yourself: e.target.yourself.value,
     };
-    axios.put(`http://localhost:5000/user/${user.email}`, data).then((res) => {
-      navigate("/dashboard");
-      toast.success(" Profile Updated Successfully");
-    });
+    axios
+      .put(`https://fast-river-88547.herokuapp.com/user/${user.email}`, data)
+      .then((res) => {
+        navigate("/dashboard");
+        toast.success(" Profile Updated Successfully");
+      });
     e.target.reset();
   };
   return (

@@ -8,15 +8,33 @@ const Contact = () => {
       <div class="hero h-full bg-base-100">
         <div class="hero-content flex-col lg:flex-row">
           <div class="text-start lg:text-start">
-            <h1 class="text-5xl font-bold">Let's chat.</h1>
-            <p class="py-6 w-4/5">
+            <h1
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-delay="200"
+              class="text-5xl font-bold"
+            >
+              Let's chat.
+            </h1>
+            <p
+              data-aos="fade-right"
+              data-aos-duration="900"
+              data-aos-delay="400"
+              class="py-6 w-4/5"
+            >
               We are always connected to our clients. it's makes us understand
               the client requirements clearly , for that we can deliver the best
               quality things to them, We beleive that listening to our clients
               and make their requiremnets full is the untimate goal for us. Feel
               free to contact us for more details..
             </p>
-            <p>let's make the world better together! </p>
+            <p
+              data-aos="fade-right"
+              data-aos-duration="800"
+              data-aos-delay="600"
+            >
+              let's make the world better together!{" "}
+            </p>
           </div>
           <div className="card flex-shrink-0 w-full max-w-sm lg:max-w-lg shadow-2xl bg-base-100">
             <div className="card-body">

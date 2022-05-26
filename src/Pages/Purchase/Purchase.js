@@ -12,7 +12,9 @@ const Purchase = () => {
     isLoading,
     refetch,
   } = useQuery("parts", () =>
-    fetch(`http://localhost:5000/get-parts/${id}`).then((res) => res.json())
+    fetch(`https://fast-river-88547.herokuapp.com/get-parts/${id}`).then(
+      (res) => res.json()
+    )
   );
   const { name, price, img, desc, minOrderQuantity, availQuantity } =
     singleParts || {};

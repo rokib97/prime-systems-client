@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+## Project Name: Prime Systems
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Project Description: Prime Systems is a MERN stack website which is Manufacturer based website,In this website We have functionality to purchase different kinad of computer parts which manufactured by Prime Systems. User can buy,cancel,review and pay from their dashboard. Also a admin route in the dashboard is present where admin can add product, can update payment status etc . Email, Password And Social login is also present in his project.
 
-## Available Scripts
+Live Link : [Prime Systems](https://hi-tech-f766c.web.app/).
 
-In the project directory, you can run:
+## Basic Project Structure, features and functionality
 
-### `npm start`
+- Single Page website about Manufacturer Company. Containes some Pages. Home , Available Parts, User Dashboard,Admin Dashboard, Blog, Login , Sign up with different route.
+- In the Home Page, There are feature like Banner, Latest Parts,Business Summary, User Reviews, Contact, Header and navbar , using Latest Parts section provides functionality like Purchase Parts, User can buy parts here which need Authentication.Also all the purchase data is stored in the Mongodb database.
+- In dashboard user can see their orders , if they want they can pay or they can cancel the order from Dashboard.
+- User can add review for the products and also update their profile in the dashboard
+- Also an admin role is present in the dashboard where an admin can update profile, add new product, Make normal user an dmin, Manage all the products, Manage order and can change the user payment status if they are paid or not.
+- Mongodb is used as a primary database for all the CRUD operations presenet in the website.
+- Log in and Sign up Authentiction is presenet . where the user can sign in and sign up and access the proivate route Dashboard.
+- Google And Email, Password based Sign in is present which is fully Functional.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## A list of technologies (frameworks, libraries) used in My project
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- React
+- React Router
+- Firebase
+- React firebase hook
+- DaisyUI
+- React-Toastify
+- React-hook-form
+- React-icons
+- React Query
+- Axios
+- Sweetalert2
+- Npm etc

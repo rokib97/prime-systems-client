@@ -10,7 +10,7 @@ const stripePromise = loadStripe(
 );
 const Payment = () => {
   const { id } = useParams();
-  const url = `http://localhost:5000/get-purchase/${id}`;
+  const url = `https://fast-river-88547.herokuapp.com/get-purchase/${id}`;
   const { data: purchase, isLoading } = useQuery(["purchase", id], () =>
     fetch(url, {
       method: "GET",
