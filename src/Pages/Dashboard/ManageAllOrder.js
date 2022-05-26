@@ -88,6 +88,9 @@ const ManageAllOrder = () => {
                   {order?.price && !order?.paid && (
                     <span className="text-info">Unpaid</span>
                   )}
+                  {order?.price && order?.paid && (
+                    <span className="text-info">Paid</span>
+                  )}
                 </td>
                 <td>
                   {order?.price && order?.paid && (

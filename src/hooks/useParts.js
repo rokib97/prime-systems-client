@@ -6,7 +6,6 @@ const useParts = () => {
     fetch(`https://fast-river-88547.herokuapp.com/get-parts`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setParts(data);
       });
   }, []);

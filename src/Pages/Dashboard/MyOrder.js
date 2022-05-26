@@ -70,6 +70,7 @@ const MyOrder = () => {
               <th>Total Price</th>
               <th>Payment</th>
               <th>Status</th>
+              <th>Shipping Status</th>
               <th>Action</th>
             </tr>
           </thead>
@@ -96,12 +97,17 @@ const MyOrder = () => {
                       <span className="text-info">Paid</span>
                       <p>
                         <span className="text-error">
-                          Transaction Id : {order.transactionId}
+                          Trans Id :
+                          <br />
+                          <span className="text-success">
+                            {order.transactionId}
+                          </span>
                         </span>
                       </p>
                     </>
                   )}
                 </td>
+                <td>{order?.shipping ? "Shipped" : "Pending"}</td>
                 <td>
                   <button
                     onClick={() => handleDelete(order._id)}

@@ -34,12 +34,9 @@ const AddProduct = () => {
         formData
       )
       .then((res) => {
-        // console.log(res.data.data.display_url);
         setImgURL(res.data.data.display_url);
       })
-      .catch((error) => {
-        console.log(error);
-      });
+      .catch((error) => {});
   };
   return (
     <div>
