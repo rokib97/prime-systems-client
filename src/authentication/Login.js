@@ -146,7 +146,7 @@ const Login = () => {
               value="login"
             />
             <p className="mt-2">
-              New to Hi Tech?
+              New to Prime Systems?
               <Link className="text-secondary" to="/signup">
                 Create new account
               </Link>
