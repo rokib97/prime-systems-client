@@ -45,13 +45,6 @@ const Navbar = ({ dark, setDark }) => {
                 <NavLink to="/dashboard">Dashboard</NavLink>
               </li>
             )}
-            <li className="mb-1">
-              <NavLink to="/blogs">Blogs</NavLink>
-            </li>
-
-            <li className="mb-1">
-              <NavLink to="/portfolio">Portfolio</NavLink>
-            </li>
 
             {user ? (
               <li className="mb-1">
@@ -133,13 +126,7 @@ const Navbar = ({ dark, setDark }) => {
               <NavLink to="/dashboard">Dashboard</NavLink>
             </li>
           )}
-          <li>
-            <NavLink to="/blogs">Blogs</NavLink>
-          </li>
 
-          <li>
-            <NavLink to="/portfolio">Portfolio</NavLink>
-          </li>
           {user && (
             <button className="btn btn-ghost hover:btn-primary font-bold">
               {user.displayName}

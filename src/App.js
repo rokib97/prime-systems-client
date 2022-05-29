@@ -11,7 +11,6 @@ import Signup from "./authentication/Signup";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import AvailableParts from "./Pages/AvailableParts/AvailableParts";
-import Blogs from "./Pages/Blogs/Blogs";
 import AddProduct from "./Pages/Dashboard/AddProduct";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import MakeAdmin from "./Pages/Dashboard/MakeAdmin";
@@ -23,7 +22,6 @@ import MyReview from "./Pages/Dashboard/MyReview";
 import Payment from "./Pages/Dashboard/Payment";
 import UpdateProfile from "./Pages/Dashboard/UpdateProfile";
 import Home from "./Pages/Home/Home";
-import MyPortfolio from "./Pages/MyPortfolio/MyPortfolio";
 import NotFound from "./Pages/NotFound/NotFound";
 import Purchase from "./Pages/Purchase/Purchase";
 function App() {
@@ -74,8 +72,6 @@ function App() {
         />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/blogs" element={<Blogs />} />
-        <Route path="/portfolio" element={<MyPortfolio />} />
         <Route path="/*" element={<NotFound />} />
       </Routes>
       <Footer />
