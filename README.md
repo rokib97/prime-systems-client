@@ -4,6 +4,11 @@
 
 Live Link : [Prime Systems](https://hi-tech-f766c.web.app/).
 
+## Admin access Email Password
+
+Email: admin@access.com
+Password: 123456
+
 ## Basic Project Structure, features and functionality
 
 - Single Page website about Manufacturer Company. Containes some Pages. Home , Available Parts, User Dashboard,Admin Dashboard, Blog, Login , Sign up with different route.
