@@ -11,7 +11,7 @@ const MyOrder = () => {
   useEffect(() => {
     if (user) {
       fetch(
-        `https://fast-river-88547.herokuapp.com/get-purchase?userEmail=${user.email}`,
+        `https://prime-systems-server.vercel.app/get-purchase?userEmail=${user.email}`,
         {
           method: "GET",
           headers: {
@@ -43,7 +43,7 @@ const MyOrder = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        const url = `https://fast-river-88547.herokuapp.com/delete-purchase/${id}`;
+        const url = `https://prime-systems-server.vercel.app/delete-purchase/${id}`;
         fetch(url, {
           method: "DELETE",
         })

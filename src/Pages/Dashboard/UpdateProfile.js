@@ -21,7 +21,7 @@ const UpdateProfile = () => {
       yourself: e.target.yourself.value,
     };
     axios
-      .put(`https://fast-river-88547.herokuapp.com/user/${user.email}`, data)
+      .put(`https://prime-systems-server.vercel.app/user/${user.email}`, data)
       .then((res) => {
         navigate("/dashboard");
         toast.success(" Profile Updated Successfully");

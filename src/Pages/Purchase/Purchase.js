@@ -12,7 +12,7 @@ const Purchase = () => {
     isLoading,
     refetch,
   } = useQuery("parts", () =>
-    fetch(`https://fast-river-88547.herokuapp.com/get-parts/${id}`).then(
+    fetch(`https://prime-systems-server.vercel.app/get-parts/${id}`).then(
       (res) => res.json()
     )
   );

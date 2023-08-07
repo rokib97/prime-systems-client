@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
 const ManageProducts = () => {
   const [parts, setParts] = useState([]);
   useEffect(() => {
-    fetch(`https://fast-river-88547.herokuapp.com/get-adminparts`)
+    fetch(`https://prime-systems-server.vercel.app/get-adminparts`)
       .then((res) => res.json())
       .then((data) => {
         setParts(data);
@@ -21,7 +21,7 @@ const ManageProducts = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        const url = `https://fast-river-88547.herokuapp.com/delete-parts/${id}`;
+        const url = `https://prime-systems-server.vercel.app/delete-parts/${id}`;
         fetch(url, {
           method: "DELETE",
         })

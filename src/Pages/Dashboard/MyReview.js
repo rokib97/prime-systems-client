@@ -16,7 +16,7 @@ const MyReview = () => {
       img: imgURL,
     };
     axios
-      .post("https://fast-river-88547.herokuapp.com/add-review", review)
+      .post("https://prime-systems-server.vercel.app/add-review", review)
       .then((res) => {
         toast.success("Review Added Successfully");
       });
