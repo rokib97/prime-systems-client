@@ -12,8 +12,8 @@ const Purchase = () => {
     isLoading,
     refetch,
   } = useQuery("parts", () =>
-    fetch(`https://prime-systems-server.vercel.app/get-parts/${id}`).then(
-      (res) => res.json()
+    fetch(`https://prime-system.onrender.com/get-parts/${id}`).then((res) =>
+      res.json()
     )
   );
   const { name, price, img, desc, minOrderQuantity, availQuantity } =

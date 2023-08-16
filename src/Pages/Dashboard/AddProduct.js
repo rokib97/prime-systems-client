@@ -17,7 +17,7 @@ const AddProduct = () => {
       img: imgURL,
     };
     axios
-      .post("https://prime-systems-server.vercel.app/add-parts", singleParts)
+      .post("https://prime-system.onrender.com/add-parts", singleParts)
       .then((res) => {
         toast.success("Product Added Successfully");
       });

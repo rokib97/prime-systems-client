@@ -41,7 +41,7 @@ const PurchaseModa = ({ singleParts, refetch }) => {
     order = { ...order, totalPrice };
 
     // purchse order
-    fetch("https://prime-systems-server.vercel.app/add-purchase", {
+    fetch("https://prime-system.onrender.com/add-purchase", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -55,7 +55,7 @@ const PurchaseModa = ({ singleParts, refetch }) => {
 
     //update wuantity
     const updatedQuantity = availQuantity - quantity;
-    fetch(`https://prime-systems-server.vercel.app/update-parts/${_id}`, {
+    fetch(`https://prime-system.onrender.com/update-parts/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

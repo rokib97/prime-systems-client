@@ -16,7 +16,7 @@ const MyReview = () => {
       img: imgURL,
     };
     axios
-      .post("https://prime-systems-server.vercel.app/add-review", review)
+      .post("https://prime-system.onrender.com/add-review", review)
       .then((res) => {
         toast.success("Review Added Successfully");
       });

@@ -10,7 +10,7 @@ const stripePromise = loadStripe(
 );
 const Payment = () => {
   const { id } = useParams();
-  const url = `https://prime-systems-server.vercel.app/get-purchase/${id}`;
+  const url = `https://prime-system.onrender.com/get-purchase/${id}`;
   const { data: purchase, isLoading } = useQuery(["purchase", id], () =>
     fetch(url, {
       method: "GET",

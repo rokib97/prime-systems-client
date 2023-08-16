@@ -11,7 +11,7 @@ const CheckoutForm = ({ purchase }) => {
   const [clientSecret, setClientSecret] = useState("");
   const { _id, totalPrice, userName, userEmail } = purchase;
   useEffect(() => {
-    fetch("https://prime-systems-server.vercel.app/create-payment-intent", {
+    fetch("https://prime-system.onrender.com/create-payment-intent", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -70,7 +70,7 @@ const CheckoutForm = ({ purchase }) => {
         orderId: _id,
         transactionId: paymentIntent.id,
       };
-      fetch(`https://prime-systems-server.vercel.app/update-purchase/${_id}`, {
+      fetch(`https://prime-system.onrender.com/update-purchase/${_id}`, {
         method: "PATCH",
         headers: {
           "content-type": "application/json",

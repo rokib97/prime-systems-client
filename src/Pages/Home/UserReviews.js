@@ -5,7 +5,7 @@ import Review from "./Review";
 
 const UserReviews = () => {
   const { data: reviews, isLoading } = useQuery("review", () =>
-    fetch("https://prime-systems-server.vercel.app/get-review").then((res) =>
+    fetch("https://prime-system.onrender.com/get-review").then((res) =>
       res.json()
     )
   );

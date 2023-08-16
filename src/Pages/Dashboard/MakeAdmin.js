@@ -9,7 +9,7 @@ const MakeAdmin = () => {
     isLoading,
     refetch,
   } = useQuery("users", () =>
-    fetch("https://prime-systems-server.vercel.app/user", {
+    fetch("https://prime-system.onrender.com/user", {
       method: "GET",
       headers: {
         "content-type": "application/jason",
